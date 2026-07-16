@@ -1,0 +1,432 @@
+/* Instrument Serif, Inter and Anton are loaded via <link> in index.html's
+   <head> (combined into one request, discovered before this file even
+   downloads) instead of @import here, which would otherwise block on a
+   serial fetch after this stylesheet loads. */
+
+/* Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #121212;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #e4e4e7;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #48ba07;
+}
+
+/* Liquid Glass CSS - Light Theme Optimized */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.35);
+  background-blend-mode: normal;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.2px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.04) 20%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.04) 80%, rgba(0,0,0,0.12) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Accent Button / Focus Ring Glows */
+.glow-green {
+  box-shadow: 0 4px 15px rgba(72, 186, 7, 0.4);
+}
+
+.hover-glow-green:hover {
+  box-shadow: 0 6px 20px rgba(72, 186, 7, 0.6);
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Text glow for Instrument Serif details */
+.text-glow {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Underline Draw Animation */
+.draw-line {
+  animation: drawLine 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.6s;
+  transform-origin: left;
+}
+
+@keyframes drawLine {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Smooth Fade-In Up Entrance Animations */
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gentle Floating Idle Animation */
+.float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Premium Reveal Animations (Lithos Inspired) */
+@keyframes heroReveal { 
+  0% { opacity: 0; transform: translateY(28px); filter: blur(12px); } 
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); } 
+}
+@keyframes heroFadeUp { 
+  0% { opacity: 0; transform: translateY(20px); } 
+  100% { opacity: 1; transform: translateY(0); } 
+}
+@keyframes heroZoom {
+  0% { opacity: 0; transform: scale(1.12); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.hero-anim { 
+  opacity: 0; 
+  animation-fill-mode: forwards; 
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); 
+}
+.hero-reveal { 
+  animation-name: heroReveal; 
+  animation-duration: 1.1s; 
+}
+.hero-fade { 
+  animation-name: heroFadeUp; 
+  animation-duration: 1s; 
+}
+.hero-zoom { 
+  animation: heroZoom 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
+}
+
+/* =========================================================
+   SERVICE CARDS — Staggered Slide-In & Floating Effects
+   ========================================================= */
+@keyframes premiumSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px) translateY(15px) scale(0.95);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Base state */
+.service-card-anim {
+  opacity: 0;
+  transform: translateX(-50px) translateY(15px) scale(0.95);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Slide-in & Float keyframe pairings */
+#servicosContent.services-active .service-card-anim {
+  animation-fill-mode: forwards;
+}
+
+#servicosContent.services-active .service-card-anim:nth-child(1) {
+  animation-name: premiumSlideIn;
+  animation-duration: 0.9s;
+  animation-delay: 0.2s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#servicosContent.services-active .service-card-anim:nth-child(2) {
+  animation-name: premiumSlideIn, floatAnim;
+  animation-duration: 0.9s, 6s;
+  animation-delay: 0.5s, 1.4s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1), ease-in-out;
+}
+
+#servicosContent.services-active .service-card-anim:nth-child(3) {
+  animation-name: premiumSlideIn, floatAnim;
+  animation-duration: 0.9s, 6s;
+  animation-delay: 0.75s, 1.65s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1), ease-in-out;
+}
+
+#servicosContent.services-active .service-card-anim:nth-child(4) {
+  animation-name: premiumSlideIn, floatAnim;
+  animation-duration: 0.9s, 6s;
+  animation-delay: 1.0s, 1.9s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1), ease-in-out;
+}
+
+#servicosContent.services-active .service-card-anim:nth-child(5) {
+  animation-name: premiumSlideIn, floatAnim;
+  animation-duration: 0.9s, 6s;
+  animation-delay: 1.25s, 2.15s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1), ease-in-out;
+}
+
+#servicosContent.services-active .service-card-anim:nth-child(6) {
+  animation-name: premiumSlideIn, floatAnim;
+  animation-duration: 0.9s, 6s;
+  animation-delay: 1.5s, 2.4s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1), ease-in-out;
+}
+
+/* Hover scales up and stops keyframe translation smoothly */
+.service-card-anim:hover {
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================================
+   FILIAIS 3D CAROUSEL STYLES
+   ========================================================= */
+#filiaisContent {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Giant background Anton text outline/glow effect optional styling */
+#giantGhostText {
+  text-shadow: 0 0 40px rgba(255,255,255,0.02);
+}
+
+/* Carousel layout 3D items transitions */
+.carousel-item {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Grain Animation */
+@keyframes grainPlay {
+  0%, 100% { transform:translate(0, 0); }
+  10% { transform:translate(-5%, -10%); }
+  20% { transform:translate(-15%, 5%); }
+  30% { transform:translate(7%, -25%); }
+  40% { transform:translate(-5%, 25%); }
+  50% { transform:translate(-15%, 10%); }
+  60% { transform:translate(15%, 0%); }
+  70% { transform:translate(0%, 15%); }
+  80% { transform:translate(3%, 35%); }
+  90% { transform:translate(-10%, 10%); }
+}
+
+.grain-overlay {
+  animation: grainPlay 8s steps(10) infinite;
+}
+
+/* Chatbot Smooth Fade-In Animation */
+.animate-fade-in {
+  animation: fadeInChat 0.3s ease-out forwards;
+}
+
+@keyframes fadeInChat {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Split: diagonal cut between the dark green and white halves,
+   with a soft cast shadow so the white panel reads as a layered blade
+   instead of a flat, hard vertical line. */
+.hero-video-panel {
+  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+  filter: drop-shadow(0 -14px 22px rgba(0, 0, 0, 0.22));
+}
+
+@media (min-width: 768px) {
+  .hero-video-panel {
+    clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%);
+    filter: drop-shadow(-18px 0 32px rgba(0, 0, 0, 0.28));
+  }
+}
+
+/* =========================================================
+   GOOGLE REVIEWS — Infinite Marquee + Micro-animations
+   ========================================================= */
+.reviews-marquee-wrapper {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+}
+
+.reviews-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  animation: reviewsMarquee 28s linear infinite;
+}
+
+.reviews-marquee-wrapper:hover .reviews-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes reviewsMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.review-card {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .review-card { width: 320px; }
+}
+
+@keyframes reviewsStarPop {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.35) rotate(-8deg); }
+}
+
+.reviews-star-pop {
+  animation: reviewsStarPop 2.4s ease-in-out infinite;
+}
+
+@keyframes reviewsBadgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(72, 186, 7, 0.35); }
+  50% { box-shadow: 0 0 0 6px rgba(72, 186, 7, 0); }
+}
+
+.reviews-badge-pulse {
+  animation: reviewsBadgePulse 2.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-marquee-track,
+  .reviews-star-pop,
+  .reviews-badge-pulse {
+    animation: none;
+  }
+}
+
+/* =========================================================
+   FINAL CTA — Icon float + Button pulse ring
+   ========================================================= */
+.cta-icon-badge {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.cta-pulse-btn {
+  position: relative;
+}
+
+.cta-pulse-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(72, 186, 7, 0.55);
+  animation: ctaPulseRing 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ctaPulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(72, 186, 7, 0.55); }
+  70% { box-shadow: 0 0 0 16px rgba(72, 186, 7, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(72, 186, 7, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-icon-badge,
+  .cta-pulse-btn::after {
+    animation: none;
+  }
+}
+
+/* Custom Frame Canvas Positioning (scroll-driven animation) */
+.service-video-custom {
+  width: 140%;
+  bottom: -10px;
+  right: -20px;
+  top: auto;
+  left: auto;
+  transform-origin: bottom right;
+}
+
+@media (min-width: 768px) {
+  .service-video-custom {
+    width: 1128px;
+    height: 635px;
+    max-width: none;
+    max-height: none;
+    bottom: -12px;
+    right: -24px;
+    top: auto;
+    left: auto;
+    transform-origin: bottom right;
+    transform: translate(36px, 159px);
+  }
+}
+
+/* Spinner keyframe for frame loader */
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Frame loader fade-out */
+#frameLoader {
+  transition: opacity 0.5s ease;
+}
+#frameLoader.hidden-loader {
+  opacity: 0;
+  pointer-events: none;
+}

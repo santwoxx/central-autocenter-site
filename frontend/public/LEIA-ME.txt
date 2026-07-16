@@ -1,0 +1,6 @@
+Coloque o seu arquivo de vídeo com o nome "vd1.mp4" nesta pasta para que ele seja carregado como o fundo do site.
+
+Recomendações:
+- Formato: MP4 (.mp4) ou WebM (.webm)
+- Resolução recomendada: 1920x1080 (Full HD) ou menor (para ficar mais leve)
+- Otimize o tamanho para menos de 3MB usando ferramentas como Handbrake.

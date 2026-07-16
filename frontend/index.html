@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="overflow-x-hidden">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="public/logo.png">
+
+  <!-- Preconnect to third-party origins used on first paint -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://unpkg.com">
+
+  <!-- Instrument Serif, Inter and Anton in a single combined request -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,400i;1,400;1,400i&family=Inter:wght@300;400;500;600;700&family=Anton&display=swap"
+    rel="stylesheet">
+
+  <!-- Security Meta Tags -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://www.googletagmanager.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self' data: https:; connect-src 'self' https://firestore.googleapis.com https://firebase.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://www.google-analytics.com https://unpkg.com https://firebaseinstallations.googleapis.com https://www.gstatic.com;">
+
+  <!-- Anti-Clickjacking Frame Buster -->
+  <style id="antiClickjack">
+    body {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript">
+    if (self === top) {
+      var antiClickjack = document.getElementById("antiClickjack");
+      antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+      top.location = self.location;
+    }
+  </script>
+
+
+  <!-- Primary SEO Metadata -->
+  <title>CENTRAL AUTOCENTER - ITABUNA - Pneus, Oficina mecânica e Troca de Óleo</title>
+  <meta name="description"
+    content="A Central Autocenter é o seu centro automotivo completo em Itabuna, BA. Oferecemos troca de pneus novos, alinhamento e balanceamento 3D, troca de óleo de câmbio automático, revisão de suspensão e freios, e mecânica geral com excelência. Solicite um orçamento no WhatsApp!">
+  <meta name="keywords"
+    content="central autocenter itabuna, pneus itabuna, oficina mecanica itabuna, troca de oleo de cambio automatico itabuna, alinhamento 3d itabuna, troca de pneus novos, revisao automotiva, suspensao automotiva, mecanica para carros em itabuna, auto center itabuna, pneus michelin itabuna, pneus pirelli, troca de oleo e filtros">
+  <meta name="author" content="Central Autocenter">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://centralautocenter.com.br/">
+
+  <!-- JSON-LD Structured Data for Local Business SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "CENTRAL AUTOCENTER - ITABUNA - Pneus, Oficina mecânica e Troca de Óleo",
+    "image": "https://centralautocenter.com.br/public/logo.png",
+    "@id": "https://centralautocenter.com.br/#localbusiness",
+    "url": "https://centralautocenter.com.br/",
+    "telephone": "+5573991741441",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "BR-415, 4249 - Centro Industrial",
+      "addressLocality": "Itabuna",
+      "addressRegion": "BA",
+      "postalCode": "45613-000",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/centralautocentro/"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "12:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "16"
+    }
+  }
+  </script>
+
+  <!-- Open Graph / Facebook / WhatsApp Preview (Rich Cards) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://centralautocenter.com.br/">
+  <meta property="og:title" content="Central Autocenter | Oficina Mecânica & Amplo Estoque de Pneus em Itabuna">
+  <meta property="og:description"
+    content="Alinhamento 3D, suspensão, freios, troca de óleo e pneus das melhores marcas. Atendimento instantâneo no WhatsApp!">
+  <meta property="og:image" content="https://centralautocenter.com.br/public/logo.png">
+  <meta property="og:image:width" content="768">
+  <meta property="og:image:height" content="512">
+  <meta property="og:site_name" content="Central Autocenter">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://centralautocenter.com.br/">
+  <meta name="twitter:title" content="Central Autocenter | Oficina Mecânica & Pneus em Itabuna - BA">
+  <meta name="twitter:description"
+    content="Seu auto center de confiança. Pneus novos, alinhamento 3D e mecânica geral com garantia.">
+  <meta name="twitter:image" content="https://centralautocenter.com.br/public/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              green: '#48ba07',
+              dark: '#121212',
+              gray: '#F4F4F5',
+            },
+            // Site's green/orange accents (emerald-*, amber-*) remapped
+            // to the brand palette instead of Tailwind's stock hues.
+            emerald: {
+              50: '#f3fbea',
+              100: '#e2f7cf',
+              200: '#c5efa2',
+              300: '#9ee36a',
+              400: '#75d235',
+              500: '#48ba07',
+              600: '#3a9906',
+              700: '#2e7607',
+              800: '#285d0b',
+              900: '#234f0d',
+              950: '#0f2b04',
+            },
+            amber: {
+              50: '#fdf7ed',
+              100: '#fbedd9',
+              200: '#f7d9ae',
+              300: '#f1c27c',
+              400: '#eba53f',
+              500: '#e58903',
+              600: '#bc7002',
+              700: '#9c5d02',
+              800: '#7c4a02',
+              900: '#603a01',
+              950: '#402601',
+            },
+          },
+          fontFamily: {
+            serif: ["'Instrument Serif'", 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            anton: ["'Anton'", 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS for Liquid Glass & Base Rules -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Firebase Analytics (modular CDN) -->
+  <script type="module" src="firebase-config.js"></script>
+</head>
+
+<body
+  class="min-h-[160vh] bg-white text-zinc-900 relative font-sans flex flex-col justify-between selection:bg-brand-green selection:text-black overflow-x-hidden">
+
+
+
+  <!-- Particles Canvas Overlay -->
+  <canvas id="particles-canvas" class="fixed inset-0 w-full h-full pointer-events-none" style="z-index: 15;"></canvas>
+
+  <!-- Minimalist Green Ambient Edge Glows -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index: 1;">
+    <div
+      class="absolute top-[10%] md:top-1/4 -left-[40%] md:-left-[20%] w-[80%] md:w-[40%] h-[40%] md:h-[60%] bg-emerald-500/10 blur-[100px] md:blur-[150px] rounded-full mix-blend-multiply">
+    </div>
+    <div
+      class="absolute top-[60%] md:top-2/3 -right-[40%] md:-right-[20%] w-[80%] md:w-[40%] h-[40%] md:h-[60%] bg-emerald-500/10 blur-[100px] md:blur-[150px] rounded-full mix-blend-multiply">
+    </div>
+  </div>
+
+  <!-- Header Navigation (Full-width Sticky Bar) -->
+  <header class="fixed top-0 left-0 right-0 z-20 bg-black shadow-lg">
+    <nav class="flex items-center justify-between w-full px-3 sm:px-4 md:px-12 py-2.5 sm:py-3 md:py-4 gap-2">
+      <!-- Logo -->
+      <div class="flex items-center gap-1 sm:gap-1.5 md:gap-2 group cursor-pointer shrink-0">
+        <img src="public/logo.png" alt="Logo Central Autocenter" width="768" height="512"
+          class="h-8 sm:h-10 md:h-16 w-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-105">
+        <span
+          class="text-white font-extrabold text-[11px] sm:text-[13px] md:text-base tracking-tight whitespace-nowrap">
+          Central <span class="text-brand-green font-semibold">Autocenter</span>
+        </span>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="flex items-center gap-0.5 sm:gap-1 md:gap-2 shrink-0">
+        <a href="#inicio" id="btnTabInicio"
+          class="text-zinc-950 transition-colors text-[9px] sm:text-[10px] md:text-xs font-black uppercase tracking-wider px-2 sm:px-2.5 md:px-4 py-1 sm:py-1.5 rounded-full bg-brand-green">Início</a>
+        <a href="#servicos" id="btnTabServicos"
+          class="text-zinc-400 hover:text-white transition-colors text-[9px] sm:text-[10px] md:text-xs font-black uppercase tracking-wider px-2 sm:px-2.5 md:px-4 py-1 sm:py-1.5 rounded-full hover:bg-white/10">Serviços</a>
+        <a href="#filiais" id="btnTabFiliais"
+          class="text-zinc-400 hover:text-white transition-colors text-[9px] sm:text-[10px] md:text-xs font-black uppercase tracking-wider px-2 sm:px-2.5 md:px-4 py-1 sm:py-1.5 rounded-full hover:bg-white/10">Filiais</a>
+        <a href="https://www.linkflowai.com.br/central.autocar" target="_blank"
+          class="text-zinc-400 hover:text-white transition-colors text-[9px] sm:text-[10px] md:text-xs font-black uppercase tracking-wider px-2 sm:px-2.5 md:px-4 py-1 sm:py-1.5 rounded-full hover:bg-white/10 flex items-center gap-1">
+          <i data-lucide="link" class="w-3 h-3"></i> Links
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="heroContent"
+    class="relative z-10 flex-1 w-full pt-14 sm:pt-16 md:pt-24 pb-12 transition-all duration-100 bg-black">
+    <!-- Home Banners Carousel (banner1.png + banner2.png + banner3.png, auto-slides sideways) -->
+    <div
+      class="w-[calc(100%+3rem)] -mx-6 md:w-screen md:relative md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] md:mx-0 relative overflow-hidden shadow-md bg-white mb-10 animate-fade-in-up">
+      <div id="bannerSlideTrack" class="flex transition-transform duration-700 ease-in-out" style="width: 300%;">
+        <a href="#"
+          onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá Central Autocenter! Vi o banner no site e gostaria de consultar as ofertas de pneus.'); if(window.CA_Analytics)window.CA_Analytics.trackBannerClick('banner1_home');"
+          target="_blank" class="w-1/3 shrink-0 block cursor-pointer">
+          <img src="public/banner1.jpg" alt="Promoções Central Autocenter" width="2172" height="724"
+            class="w-full aspect-[3/1] object-cover block" />
+        </a>
+        <a href="#"
+          onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá Central Autocenter! Vi o banner de ofertas de serviços no site e gostaria de solicitar um orçamento.'); if(window.CA_Analytics)window.CA_Analytics.trackBannerClick('banner2_home');"
+          target="_blank" class="w-1/3 shrink-0 block cursor-pointer">
+          <img src="public/banner2.jpg" alt="Ofertas Central Autocenter" width="2172" height="724"
+            class="w-full aspect-[3/1] object-cover block" />
+        </a>
+        <a href="#"
+          onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá Central Autocenter! Vi o banner no site e quero saber mais sobre pneus novos, peças e serviços.'); if(window.CA_Analytics)window.CA_Analytics.trackBannerClick('banner3_home');"
+          target="_blank" class="w-1/3 shrink-0 block cursor-pointer">
+          <img src="public/banner3.jpg" alt="Central Autocenter - Mais do que uma oficina, um novo padrão" width="1600"
+            height="533" class="w-full aspect-[3/1] object-cover block" />
+        </a>
+      </div>
+      <!-- Slide indicator dots -->
+      <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+        <button class="banner-dot w-1.5 h-1.5 rounded-full bg-zinc-900 transition-all" data-slide="0"
+          aria-label="Banner 1"></button>
+        <button class="banner-dot w-1.5 h-1.5 rounded-full bg-zinc-900/25 transition-all" data-slide="1"
+          aria-label="Banner 2"></button>
+        <button class="banner-dot w-1.5 h-1.5 rounded-full bg-zinc-900/25 transition-all" data-slide="2"
+          aria-label="Banner 3"></button>
+      </div>
+    </div>
+
+    <!-- Split Hero: left half dark green (text), right half white (video 1), edge-to-edge -->
+    <div class="w-full flex flex-col md:flex-row md:items-stretch">
+
+      <!-- LEFT HALF: transparent, shows heroContent's own bg-black -->
+      <div
+        class="relative w-full md:w-1/2 flex flex-col items-center md:items-start justify-center text-center md:text-left px-6 md:pl-6 lg:pl-16 md:pr-10 py-12 md:py-16 overflow-hidden">
+        
+        <!-- Top badge -->
+        <div
+          class="relative z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green border border-brand-green/50 text-zinc-950 text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg shadow-brand-green/10 animate-fade-in-up">
+          <span
+            class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(72,186,7,0.8)] animate-pulse"></span>
+          Mecânica Geral & Pneus em Itabuna/BA
+        </div>
+
+        <!-- Heading with Anton Font -->
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight leading-none max-w-3xl animate-fade-in-up delay-100"
+          style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
+          Segurança e performance para o seu <span class="relative inline-block"><span
+              class="text-white relative z-10">caminho</span><span
+              class="absolute bottom-1 left-0 right-0 h-3 bg-brand-green/85 z-0 rounded-sm draw-line"
+              style="transform: scaleX(0);"></span></span>
+        </h1>
+
+        <p
+          class="text-zinc-300 max-w-xl text-sm md:text-base mb-10 font-semibold leading-relaxed animate-fade-in-up delay-200">
+          Encontre a medida e marca ideal de pneu para o seu veículo. Pesquise abaixo e seja atendido instantaneamente
+          pelos nossos especialistas no WhatsApp.
+        </p>
+
+        <!-- Tire Search Widget -->
+        <div class="w-full max-w-2xl mb-8 animate-fade-in-up delay-300 relative z-30">
+          <div class="space-y-4 relative z-30 float-slow">
+            <!-- Search Input Container -->
+            <div
+              class="bg-black border border-white/10 rounded-full pl-4 sm:pl-6 pr-2 py-2 flex items-center gap-2 sm:gap-3 shadow-2xl transition-all duration-300 hover:border-brand-green/60 w-full">
+              <i data-lucide="search" class="w-5 h-5 text-brand-green shrink-0" stroke-width="2.5"></i>
+              <input type="text" id="tireSearchInput" placeholder="Busque por medida (ex: 205/55 R16)..."
+                class="bg-transparent border-none outline-none flex-1 text-white placeholder:text-zinc-500 text-sm sm:text-base py-1 font-bold w-full min-w-0"
+                autocomplete="off">
+              <!-- Reset Button -->
+              <button id="clearSearchBtn" class="hidden p-2 text-zinc-400 hover:text-white transition-colors">
+                <i data-lucide="x" class="w-4 h-4"></i>
+              </button>
+              <div
+                class="bg-brand-green text-zinc-950 rounded-full p-3.5 hover-glow-green cursor-pointer transition-transform duration-300 hover:scale-105"
+                id="searchTriggerBtn">
+                <i data-lucide="search" class="w-5 h-5" stroke-width="3"></i>
+              </div>
+            </div>
+
+            <!-- Helper Suggestion Legend -->
+            <p class="text-[11px] md:text-xs text-zinc-400 font-medium text-center md:text-left mt-2 tracking-wide">
+              Exemplo: pneu <span
+                class="underline decoration-brand-green decoration-2 underline-offset-2 font-extrabold text-white">Michelin</span>
+              ou medida <span
+                class="underline decoration-brand-green decoration-2 underline-offset-2 font-extrabold text-white">205/55
+                R16</span>
+            </p>
+
+            <!-- Quick Filter Buttons -->
+            <div class="flex flex-wrap justify-center md:justify-start gap-2 text-xs font-medium">
+              <span class="self-center text-zinc-400 font-semibold">Mais buscados:</span>
+              <button
+                class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-brand-green border border-white/10 hover:border-brand-green text-zinc-300 hover:text-zinc-950 font-semibold quick-tag shadow-sm transition-all duration-300">175/70
+                R14</button>
+              <button
+                class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-brand-green border border-white/10 hover:border-brand-green text-zinc-300 hover:text-zinc-950 font-semibold quick-tag shadow-sm transition-all duration-300">195/60
+                R15</button>
+              <button
+                class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-brand-green border border-white/10 hover:border-brand-green text-zinc-300 hover:text-zinc-950 font-semibold quick-tag shadow-sm transition-all duration-300">205/55
+                R16</button>
+              <button
+                class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-brand-green border border-white/10 hover:border-brand-green text-zinc-300 hover:text-zinc-950 font-semibold quick-tag shadow-sm transition-all duration-300">Michelin</button>
+              <button
+                class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-brand-green border border-white/10 hover:border-brand-green text-zinc-300 hover:text-zinc-950 font-semibold quick-tag shadow-sm transition-all duration-300">Pirelli</button>
+            </div>
+
+            <!-- Auto-suggest Results Dropdown -->
+            <div id="resultsDropdown"
+              class="absolute left-0 right-0 mt-3 max-h-[320px] overflow-y-auto bg-white/95 backdrop-blur-2xl rounded-3xl p-4 hidden flex-col gap-2 z-40 border border-zinc-200 text-left shadow-2xl">
+              <!-- Results will be dynamically populated here -->
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-col items-center md:items-start gap-4 animate-fade-in-up delay-400 relative z-20">
+          <!-- Secondary Call-to-Action Button -->
+          <a href="#"
+            onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá! Vim pelo site. Gostaria de solicitar um orçamento para alinhamento e balanceamento.')"
+            target="_self" target="_blank"
+            class="border border-white/15 bg-white/5 backdrop-blur-md rounded-full px-5 sm:px-8 py-3 w-full md:w-auto justify-center text-center text-white text-xs sm:text-sm font-bold hover:bg-brand-green hover:text-zinc-950 hover:border-brand-green transition-all duration-300 flex items-center gap-2 cursor-pointer shadow-sm group">
+            <i data-lucide="wrench"
+              class="w-4 h-4 text-brand-green group-hover:text-zinc-950 shrink-0 transition-colors"></i>
+            <span>Orçamento de Serviços Mecânicos</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT HALF: solid white panel, video 1 fills it edge-to-edge, diagonal cut for a premium feel -->
+      <div
+        class="hero-video-panel relative w-full md:w-1/2 min-h-[320px] md:min-h-0 bg-white overflow-hidden animate-fade-in-up delay-300">
+        <video id="bgVideo" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply" autoplay loop muted
+          playsinline>
+          <source src="public/vd1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </main>
+
+  <!-- Services Content Area (Tab Content - Hidden by default) -->
+  <main id="servicosContent"
+    class="w-full flex flex-col items-center bg-white hidden border-y-[24px] border-black">
+    
+    <!-- Top Wrapper -->
+    <div class="relative z-10 w-full pt-24 md:pt-28 pb-12 md:pb-16 flex flex-col items-center">
+
+      <div class="w-full max-w-7xl mx-auto px-6 flex flex-col items-center relative z-10">
+
+      <!-- Inner Wrapper for split layout -->
+      <div class="w-full flex flex-col md:flex-row items-center gap-4 md:gap-8 overflow-visible">
+
+        <!-- LEFT: Service Cards Panel (slide in from left) -->
+        <div id="serviceCardsPanel" class="flex-1 flex flex-col gap-2 md:gap-3 z-10 w-full md:max-w-[32%]">
+
+          <!-- Panel Header -->
+          <div class="mb-1 md:mb-2 service-card-anim" style="--delay: 0.2s">
+            <h2 class="text-3xl md:text-5xl text-zinc-950 mt-1 leading-none tracking-tight"
+              style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
+              O que fazemos<br />pelo seu veículo
+            </h2>
+          </div>
+
+          <!-- Service Card: Alinhamento -->
+          <a href="#"
+            onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá! Gostaria de agendar um serviço de Alinhamento e Balanceamento 3D.')"
+            target="_self" target="_blank"
+            class="service-card-anim flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2 md:py-3 rounded-2xl bg-white/90 backdrop-blur-sm border border-zinc-200 shadow-sm hover:shadow-lg hover:border-emerald-400 transition-all duration-300 group cursor-pointer"
+            style="--delay: 0.5s">
+            <div
+              class="bg-zinc-950 text-emerald-400 rounded-xl p-2.5 md:p-3 shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <i data-lucide="compass" class="w-4.5 h-4.5 md:w-5 md:h-5" stroke-width="2.5"></i>
+            </div>
+            <div>
+              <h4
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                Alinhamento & Balanceamento 3D</h4>
+              <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">Precisão
+                a laser, direção alinhada e pneus equilibrados.</p>
+            </div>
+            <i data-lucide="arrow-right"
+              class="w-4 h-4 text-zinc-300 group-hover:text-emerald-500 ml-auto shrink-0 transition-colors duration-300"></i>
+          </a>
+
+          <!-- Service Card: Troca de Óleo -->
+          <a href="#"
+            onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá! Gostaria de agendar um serviço de Troca de Óleo e Filtros.')"
+            target="_self" target="_blank"
+            class="service-card-anim flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2 md:py-3 rounded-2xl bg-white/90 backdrop-blur-sm border border-zinc-200 shadow-sm hover:shadow-lg hover:border-emerald-400 transition-all duration-300 group cursor-pointer"
+            style="--delay: 0.75s">
+            <div
+              class="bg-zinc-950 text-emerald-400 rounded-xl p-2.5 md:p-3 shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <i data-lucide="droplet" class="w-4.5 h-4.5 md:w-5 md:h-5" stroke-width="2.5"></i>
+            </div>
+            <div>
+              <h4
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                Troca de Óleo & Filtros</h4>
+              <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">
+                Lubrificantes e filtros recomendados para manter o motor protegido.</p>
+            </div>
+            <i data-lucide="arrow-right"
+              class="w-4 h-4 text-zinc-300 group-hover:text-emerald-500 ml-auto shrink-0 transition-colors duration-300"></i>
+          </a>
+
+          <!-- Service Card: Troca do Fluido do Câmbio -->
+          <a href="#"
+            onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá! Gostaria de agendar um serviço de Troca do Fluido do Câmbio.')"
+            target="_self" target="_blank"
+            class="service-card-anim flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2 md:py-3 rounded-2xl bg-white/90 backdrop-blur-sm border border-zinc-200 shadow-sm hover:shadow-lg hover:border-emerald-400 transition-all duration-300 group cursor-pointer"
+            style="--delay: 1s">
+            <div
+              class="bg-zinc-950 text-emerald-400 rounded-xl p-2.5 md:p-3 shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <i data-lucide="settings" class="w-4.5 h-4.5 md:w-5 md:h-5" stroke-width="2.5"></i>
+            </div>
+            <div>
+              <h4
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                Troca do Fluido do Câmbio</h4>
+              <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">
+                Substituição completa do fluido para proteger a transmissão automática.</p>
+            </div>
+            <i data-lucide="arrow-right"
+              class="w-4 h-4 text-zinc-300 group-hover:text-emerald-500 ml-auto shrink-0 transition-colors duration-300"></i>
+          </a>
+
+          <!-- Service Card: Suspensão & Freios -->
+          <a href="#"
+            onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá! Gostaria de agendar um serviço de Suspensão e Freios.')"
+            target="_self" target="_blank"
+            class="service-card-anim flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2 md:py-3 rounded-2xl bg-white/90 backdrop-blur-sm border border-zinc-200 shadow-sm hover:shadow-lg hover:border-emerald-400 transition-all duration-300 group cursor-pointer"
+            style="--delay: 1.25s">
+            <div
+              class="bg-zinc-950 text-emerald-400 rounded-xl p-2.5 md:p-3 shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <i data-lucide="shield-check" class="w-4.5 h-4.5 md:w-5 md:h-5" stroke-width="2.5"></i>
+            </div>
+            <div>
+              <h4
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                Suspensão & Freios</h4>
+              <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">
+                Diagnóstico completo de amortecedores, pastilhas e discos.</p>
+            </div>
+            <i data-lucide="arrow-right"
+              class="w-4 h-4 text-zinc-300 group-hover:text-emerald-500 ml-auto shrink-0 transition-colors duration-300"></i>
+          </a>
+
+          <!-- Service Card: Mecânica Geral -->
+          <a href="#"
+            onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá! Gostaria de agendar um serviço de Mecânica Geral.')"
+            target="_self" target="_blank"
+            class="service-card-anim flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2 md:py-3 rounded-2xl bg-white/90 backdrop-blur-sm border border-zinc-200 shadow-sm hover:shadow-lg hover:border-emerald-400 transition-all duration-300 group cursor-pointer"
+            style="--delay: 1.5s">
+            <div
+              class="bg-zinc-950 text-emerald-400 rounded-xl p-2.5 md:p-3 shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <i data-lucide="wrench" class="w-4.5 h-4.5 md:w-5 md:h-5" stroke-width="2.5"></i>
+            </div>
+            <div>
+              <h4
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                Mecânica Geral & Diagnóstico</h4>
+              <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">Motor,
+                correias, injeção eletrônica e reparos com garantia.</p>
+            </div>
+            <i data-lucide="arrow-right"
+              class="w-4 h-4 text-zinc-300 group-hover:text-emerald-500 ml-auto shrink-0 transition-colors duration-300"></i>
+          </a>
+
+          <!-- Service Card: Pneus e Peças -->
+          <a href="#"
+            onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá! Gostaria de saber mais sobre Pneus e Peças.')"
+            target="_self" target="_blank"
+            class="service-card-anim flex items-center gap-3 md:gap-4 px-4 md:px-5 py-2 md:py-3 rounded-2xl bg-zinc-950 text-white border border-zinc-800 shadow-sm hover:shadow-[0_0_20px_rgba(117,210,53,0.3)] hover:border-emerald-400/50 transition-all duration-300 group cursor-pointer"
+            style="--delay: 1.75s">
+            <div
+              class="bg-emerald-500 text-white rounded-xl p-2.5 md:p-3 shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_15px_rgba(72,186,7,0.5)]">
+              <i data-lucide="package" class="w-4.5 h-4.5 md:w-5 md:h-5" stroke-width="2.5"></i>
+            </div>
+            <div>
+              <h4
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-white group-hover:text-emerald-400 transition-colors">
+                Pneus & Peças</h4>
+              <p class="text-[11px] md:text-xs text-zinc-400 font-medium leading-relaxed tracking-wide mt-0.5">Amplo
+                estoque de pneus com as melhores marcas do mercado.</p>
+            </div>
+            <i data-lucide="arrow-right"
+              class="w-4 h-4 text-zinc-600 group-hover:text-emerald-400 ml-auto shrink-0 transition-colors duration-300"></i>
+          </a>
+
+        </div>
+
+        <!-- RIGHT: Video Panel -->
+        <div id="videoPanel"
+          class="flex-1 relative w-full md:max-w-[60%] h-full min-h-[40vh] md:min-h-[75vh] overflow-visible pointer-events-none md:ml-auto md:translate-x-8">
+          <video id="frameVideo" src="public/vd3.mp4" autoplay loop playsinline muted preload="auto"
+            class="service-video-custom absolute mix-blend-multiply transform-gpu brightness-[1.05] contrast-[1.08] select-none w-full h-full object-contain object-right">
+          </video>
+          <!-- Loading indicator -->
+          <div id="frameLoader"
+            style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;pointer-events:none;">
+            <div style="width:48px;height:48px;border:3px solid rgba(72,186,7,0.2);border-top-color:#48ba07;border-radius:50%;animation:spin 0.8s linear infinite;"></div>
+            <span style="color:#48ba07;font-size:11px;font-weight:900;letter-spacing:0.1em;text-transform:uppercase;opacity:0.8;">Carregando...</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Top Wrapper -->
+
+    <!-- Everything after the video: solid black, full-bleed -->
+    <div class="w-full bg-black pt-16 pb-16 md:pt-24 md:pb-24">
+      <!-- New Conversion Sections -->
+      <div class="w-full flex flex-col gap-16 md:gap-24 relative z-10 max-w-5xl mx-auto px-6">
+
+        <!-- 1. Trust Badges -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+          <div data-scroll-anim data-anim="hero-fade" style="animation-delay: 0ms"
+            class="flex items-center gap-4 bg-white/90 backdrop-blur-md rounded-2xl p-5 border border-zinc-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-zinc-900">Garantia Total</h5>
+              <p class="text-[11px] text-zinc-500 mt-0.5">90 dias em todos os serviços</p>
+            </div>
+          </div>
+          <div data-scroll-anim data-anim="hero-fade" style="animation-delay: 120ms"
+            class="flex items-center gap-4 bg-white/90 backdrop-blur-md rounded-2xl p-5 border border-zinc-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div class="w-12 h-12 rounded-full bg-zinc-900 flex items-center justify-center text-emerald-400 shrink-0">
+              <i data-lucide="wrench" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-zinc-900">Peças Originais</h5>
+              <p class="text-[11px] text-zinc-500 mt-0.5">Qualidade e durabilidade garantidas</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Why Choose Us -->
+        <div data-scroll-anim data-anim="hero-reveal"
+          class="bg-zinc-900 rounded-[2rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl border border-zinc-800">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none">
+          </div>
+          <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none">
+          </div>
+
+          <div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
+            <div class="flex-1">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-4">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(72,186,7,0.8)]"></span>
+                Benefícios
+              </div>
+              <h3 class="text-3xl md:text-5xl mb-4 text-white"
+                style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
+                Por que escolher a Central Autocenter?
+              </h3>
+              <p class="text-zinc-400 text-sm md:text-base mb-8 max-w-lg leading-relaxed">
+                Não somos apenas uma oficina mecânica. Somos o parceiro de confiança para a segurança e performance do
+                seu veículo, com processos transparentes e foco total na sua satisfação.
+              </p>
+              <ul class="flex flex-col gap-1">
+                <li class="flex items-start gap-3 p-2 -m-2 rounded-xl hover:bg-white/5 transition-colors duration-300">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mt-0.5 shrink-0"></i>
+                  <div>
+                    <strong class="text-sm text-zinc-100 font-bold tracking-wide">Orçamento 100% Transparente</strong>
+                    <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Você aprova cada item antes de executarmos o
+                      serviço. Sem surpresas ou cobranças ocultas no final.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 p-2 -m-2 rounded-xl hover:bg-white/5 transition-colors duration-300">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mt-0.5 shrink-0"></i>
+                  <div>
+                    <strong class="text-sm text-zinc-100 font-bold tracking-wide">Equipamentos de Ponta</strong>
+                    <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Alinhamento 3D, scanners automotivos de última
+                      geração e ferramentas precisas para diagnósticos exatos.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 p-2 -m-2 rounded-xl hover:bg-white/5 transition-colors duration-300">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 mt-0.5 shrink-0"></i>
+                  <div>
+                    <strong class="text-sm text-zinc-100 font-bold tracking-wide">Agilidade e Pontualidade</strong>
+                    <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Respeitamos o seu tempo e entregamos seu
+                      veículo no prazo combinado, sem enrolação.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1 w-full h-[350px] bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+              <img src="public/autocenter.jpg" alt="Oficina Central Autocenter" width="1600" height="900"
+                loading="lazy"
+                class="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 cursor-pointer">
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Google Reviews / Testimonials Section -->
+        <div data-scroll-anim data-anim="hero-reveal" class="w-full relative z-10">
+          <!-- Header info -->
+          <div class="flex flex-col items-center gap-3 mb-10 text-center relative z-10">
+            <div
+              class="flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 shadow-sm reviews-badge-pulse">
+              <span class="text-white text-sm font-black">4.9</span>
+              <!-- 5 Stars icons -->
+              <div class="flex items-center gap-0.5 text-amber-400">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current reviews-star-pop"
+                  style="animation-delay: 0ms"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current reviews-star-pop"
+                  style="animation-delay: 120ms"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current reviews-star-pop"
+                  style="animation-delay: 240ms"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current reviews-star-pop"
+                  style="animation-delay: 360ms"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current reviews-star-pop"
+                  style="animation-delay: 480ms"></i>
+              </div>
+              <span class="text-white/20 text-xs font-semibold px-1">|</span>
+              <span class="text-zinc-300 text-xs font-semibold">16 avaliações no Google</span>
+            </div>
+            <h3 class="text-3xl md:text-4xl text-white tracking-tight"
+              style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
+              Quem conhece, <span class="text-brand-green">confia</span> no nosso trabalho
+            </h3>
+          </div>
+
+          <!-- Reviews marquee: multiple cards visible, scrolling past continuously, pausing on hover -->
+          <div
+            class="reviews-marquee-wrapper w-[calc(100%+3rem)] -mx-6 md:w-screen md:relative md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] md:mx-0 relative z-10">
+            <div class="reviews-marquee-track">
+              <!-- Review 1: will iam -->
+              <div
+                class="review-card bg-white rounded-2xl border-t-4 border-brand-green p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 group">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
+                        WI
+                      </div>
+                      <div>
+                        <h4 class="font-extrabold text-zinc-900 text-xs">will iam</h4>
+                        <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
+                      </div>
+                    </div>
+                    <!-- Google icon -->
+                    <span class="text-zinc-400 group-hover:text-zinc-600 transition-colors">
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-6.887 4.114-4.694 0-8.503-3.809-8.503-8.5s3.81-8.5 8.503-8.5c2.29 0 4.18.9 5.67 2.37l3.125-3.125C18.66.87 15.695 0 12.24 0 5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.96 0 11.57-4.89 11.57-11.79 0-.795-.085-1.57-.24-2.4H12.24z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <!-- Stars -->
+                  <div class="flex gap-0.5 text-amber-500 mb-3">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <p class="text-zinc-800 text-xs font-semibold leading-relaxed">
+                    "Ótimos profissionais/ serviço de qualidade/ garantia e ótimo estabelecimento"
+                  </p>
+                </div>
+              </div>
+
+              <!-- Review 2: Paulo Cesar -->
+              <div
+                class="review-card bg-white rounded-2xl border-t-4 border-brand-green p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 group">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
+                        PC
+                      </div>
+                      <div>
+                        <h4 class="font-extrabold text-zinc-900 text-xs">Paulo Cesar</h4>
+                        <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
+                      </div>
+                    </div>
+                    <span class="text-zinc-400 group-hover:text-zinc-600 transition-colors">
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-6.887 4.114-4.694 0-8.503-3.809-8.503-8.5s3.81-8.5 8.503-8.5c2.29 0 4.18.9 5.67 2.37l3.125-3.125C18.66.87 15.695 0 12.24 0 5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.96 0 11.57-4.89 11.57-11.79 0-.795-.085-1.57-.24-2.4H12.24z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex gap-0.5 text-amber-500 mb-3">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <p class="text-zinc-800 text-xs font-semibold leading-relaxed">
+                    "Loja com excelente estrutura, atendimento e execução de serviço!"
+                  </p>
+                </div>
+              </div>
+
+              <!-- Review 3: VM4 PRODUÇÕES -->
+              <div
+                class="review-card bg-white rounded-2xl border-t-4 border-brand-green p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 group">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
+                        VP
+                      </div>
+                      <div>
+                        <h4 class="font-extrabold text-zinc-900 text-xs">VM4 PRODUÇÕES</h4>
+                        <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
+                      </div>
+                    </div>
+                    <span class="text-zinc-400 group-hover:text-zinc-600 transition-colors">
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-6.887 4.114-4.694 0-8.503-3.809-8.503-8.5s3.81-8.5 8.503-8.5c2.29 0 4.18.9 5.67 2.37l3.125-3.125C18.66.87 15.695 0 12.24 0 5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.96 0 11.57-4.89 11.57-11.79 0-.795-.085-1.57-.24-2.4H12.24z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex gap-0.5 text-amber-500 mb-3">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <p class="text-zinc-800 text-xs font-semibold leading-relaxed">
+                    "Só coloco meu carro aqui, serviços de qualidade!"
+                  </p>
+                </div>
+              </div>
+
+              <!-- Duplicate set (aria-hidden) so the marquee loops seamlessly -->
+              <div
+                class="review-card bg-white rounded-2xl border-t-4 border-brand-green p-6 shadow-lg flex flex-col justify-between"
+                aria-hidden="true">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
+                        WI</div>
+                      <div>
+                        <h4 class="font-extrabold text-zinc-900 text-xs">will iam</h4>
+                        <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
+                      </div>
+                    </div>
+                    <span class="text-zinc-400">
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-6.887 4.114-4.694 0-8.503-3.809-8.503-8.5s3.81-8.5 8.503-8.5c2.29 0 4.18.9 5.67 2.37l3.125-3.125C18.66.87 15.695 0 12.24 0 5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.96 0 11.57-4.89 11.57-11.79 0-.795-.085-1.57-.24-2.4H12.24z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex gap-0.5 text-amber-500 mb-3">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <p class="text-zinc-800 text-xs font-semibold leading-relaxed">
+                    "Ótimos profissionais/ serviço de qualidade/ garantia e ótimo estabelecimento"
+                  </p>
+                </div>
+              </div>
+              <div
+                class="review-card bg-white rounded-2xl border-t-4 border-brand-green p-6 shadow-lg flex flex-col justify-between"
+                aria-hidden="true">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
+                        PC</div>
+                      <div>
+                        <h4 class="font-extrabold text-zinc-900 text-xs">Paulo Cesar</h4>
+                        <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
+                      </div>
+                    </div>
+                    <span class="text-zinc-400">
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-6.887 4.114-4.694 0-8.503-3.809-8.503-8.5s3.81-8.5 8.503-8.5c2.29 0 4.18.9 5.67 2.37l3.125-3.125C18.66.87 15.695 0 12.24 0 5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.96 0 11.57-4.89 11.57-11.79 0-.795-.085-1.57-.24-2.4H12.24z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex gap-0.5 text-amber-500 mb-3">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <p class="text-zinc-800 text-xs font-semibold leading-relaxed">
+                    "Loja com excelente estrutura, atendimento e execução de serviço!"
+                  </p>
+                </div>
+              </div>
+              <div
+                class="review-card bg-white rounded-2xl border-t-4 border-brand-green p-6 shadow-lg flex flex-col justify-between"
+                aria-hidden="true">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
+                        VP</div>
+                      <div>
+                        <h4 class="font-extrabold text-zinc-900 text-xs">VM4 PRODUÇÕES</h4>
+                        <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
+                      </div>
+                    </div>
+                    <span class="text-zinc-400">
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-6.887 4.114-4.694 0-8.503-3.809-8.503-8.5s3.81-8.5 8.503-8.5c2.29 0 4.18.9 5.67 2.37l3.125-3.125C18.66.87 15.695 0 12.24 0 5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.96 0 11.57-4.89 11.57-11.79 0-.795-.085-1.57-.24-2.4H12.24z" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="flex gap-0.5 text-amber-500 mb-3">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <p class="text-zinc-800 text-xs font-semibold leading-relaxed">
+                    "Só coloco meu carro aqui, serviços de qualidade!"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. FAQ Section -->
+        <div class="flex flex-col items-center max-w-3xl mx-auto w-full">
+          <h3 class="text-3xl md:text-4xl mb-8 text-white text-center"
+            style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
+            Dúvidas Frequentes
+          </h3>
+
+          <div class="w-full flex flex-col gap-3" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div data-scroll-anim data-anim="hero-fade" style="animation-delay: 0ms"
+              class="border border-zinc-200 rounded-2xl bg-white overflow-hidden transition-all duration-300 hover:border-emerald-400">
+              <button
+                class="faq-btn w-full px-5 py-5 flex items-center gap-4 text-left focus:outline-none cursor-pointer">
+                <i data-lucide="help-circle" class="w-5 h-5 text-emerald-500 shrink-0"></i>
+                <span class="font-bold text-sm text-zinc-900 tracking-tight flex-1">O orçamento tem algum custo?</span>
+                <i data-lucide="chevron-down"
+                  class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content hidden px-5 pb-5 pl-14 text-sm text-zinc-600 leading-relaxed">
+                Não! Nossa avaliação é totalmente gratuita e sem compromisso. Fazemos o diagnóstico do seu veículo e
+                apresentamos as soluções antes de qualquer cobrança.
+              </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div data-scroll-anim data-anim="hero-fade" style="animation-delay: 90ms"
+              class="border border-zinc-200 rounded-2xl bg-white overflow-hidden transition-all duration-300 hover:border-emerald-400">
+              <button
+                class="faq-btn w-full px-5 py-5 flex items-center gap-4 text-left focus:outline-none cursor-pointer">
+                <i data-lucide="help-circle" class="w-5 h-5 text-emerald-500 shrink-0"></i>
+                <span class="font-bold text-sm text-zinc-900 tracking-tight flex-1">Vocês atendem todas as marcas de
+                  veículos?</span>
+                <i data-lucide="chevron-down"
+                  class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content hidden px-5 pb-5 pl-14 text-sm text-zinc-600 leading-relaxed">
+                Sim, somos uma oficina multimarcas. Nossa equipe é treinada e temos equipamentos atualizados para
+                diagnosticar e reparar veículos nacionais e importados de todas as montadoras.
+              </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div data-scroll-anim data-anim="hero-fade" style="animation-delay: 180ms"
+              class="border border-zinc-200 rounded-2xl bg-white overflow-hidden transition-all duration-300 hover:border-emerald-400">
+              <button
+                class="faq-btn w-full px-5 py-5 flex items-center gap-4 text-left focus:outline-none cursor-pointer">
+                <i data-lucide="help-circle" class="w-5 h-5 text-emerald-500 shrink-0"></i>
+                <span class="font-bold text-sm text-zinc-900 tracking-tight flex-1">Preciso agendar horário ou posso ir
+                  direto?</span>
+                <i data-lucide="chevron-down"
+                  class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content hidden px-5 pb-5 pl-14 text-sm text-zinc-600 leading-relaxed">
+                Você pode vir direto em qualquer uma de nossas filiais, mas recomendamos fortemente o agendamento prévio
+                via WhatsApp para evitar filas e garantir que um box e um especialista estarão esperando pelo seu
+                veículo no horário marcado.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Final CTA -->
+        <div data-scroll-anim data-anim="hero-reveal" class="w-full text-center relative overflow-hidden py-6">
+          <!-- Decorative floating glows -->
+          <div
+            class="absolute top-0 left-1/4 -translate-x-1/2 w-72 h-72 bg-brand-green/10 rounded-full blur-[90px] pointer-events-none float-slow">
+          </div>
+          <div
+            class="absolute bottom-0 right-1/4 translate-x-1/2 w-72 h-72 bg-emerald-500/10 rounded-full blur-[90px] pointer-events-none float-slow"
+            style="animation-delay: 1.5s"></div>
+
+          <div class="relative z-10 flex flex-col items-center">
+            <div
+              class="cta-icon-badge mb-6 w-16 h-16 rounded-full bg-brand-green/10 border border-brand-green/30 flex items-center justify-center">
+              <i data-lucide="shield-check" class="w-7 h-7 text-brand-green"></i>
+            </div>
+            <h2 class="text-3xl md:text-5xl text-white mb-4 tracking-tight leading-none"
+              style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
+              Seu carro merece o <span class="text-brand-green">melhor cuidado</span>
+            </h2>
+            <p class="text-sm md:text-base text-zinc-300 font-medium max-w-md mx-auto mb-8">
+              Agende agora um check-up preventivo gratuito e rode com segurança e tranquilidade.
+            </p>
+            <a href="#"
+              onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá! Gostaria de agendar um check-up preventivo gratuito.')"
+              target="_self" target="_blank"
+              class="cta-pulse-btn hover-glow-green bg-brand-green text-zinc-950 px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:scale-105 active:scale-95 transition-all shadow-xl flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4 text-zinc-950"></i>
+              Agendar via WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Filiais Content Area (Tab Content - Hidden by default) -->
+  <main id="filiaisContent"
+    class="relative z-10 w-full min-h-screen flex flex-col justify-start hidden overflow-y-auto transition-colors duration-500 ease-in-out bg-brand-green"
+    style="background-color: #48ba07;">
+
+    <!-- Wrapper for Top Area (Carousel & Infos) -->
+    <div
+      class="relative w-full min-h-[100dvh] flex flex-col justify-start md:justify-between pb-12 md:pb-0 overflow-hidden shrink-0">
+
+      <!-- 1. Grain overlay (pure CSS SVG fractal noise representation) -->
+      <div
+        class="absolute inset-0 pointer-events-none opacity-[0.03] bg-[url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')] bg-repeat"
+        style="z-index: 50; background-size: 200px 200px;"></div>
+
+      <!-- 2. Giant ghost background text -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
+        style="z-index: 2; top: 12%;">
+        <span id="giantGhostText"
+          class="text-white/20 uppercase leading-none tracking-normal select-none whitespace-nowrap"
+          style="font-family: 'Anton', sans-serif; font-size: clamp(120px, 28vw, 420px); text-shadow: 0 0 30px rgba(255,255,255,0.05);">
+          MATRIZ
+        </span>
+      </div>
+
+      <!-- 3. Top-left brand label (Black text as requested) -->
+      <div class="relative md:absolute top-auto md:top-24 left-auto md:left-12 pt-24 md:pt-0 pl-6 md:pl-0"
+        style="z-index: 60;">
+        <span class="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-950">Nossas Filiais</span>
+      </div>
+
+      <!-- 4. Layered Carousel Container -->
+      <div
+        class="relative md:absolute inset-auto md:inset-0 w-full h-[35vh] md:h-[72vh] flex items-center md:items-end justify-center mt-6 md:mt-0 pb-0 md:pb-8 z-[3]">
+        <div id="figurineCarousel" class="relative w-full h-full max-w-5xl mx-auto">
+          <!-- Filial 1 - MATRIZ (Itabuna - Central Pneus) -->
+          <a href="https://www.google.com/maps/search/?api=1&query=Central%20Auto%20Center%20-%20BR-415%2C%204249%20-%20Centro%20Industrial%2C%20Itabuna%20-%20BA%2C%2045613-000"
+            target="_blank"
+            class="carousel-item absolute left-1/2 bottom-0 w-[50%] md:w-[35%] aspect-[16/9] -translate-x-1/2 transition-all duration-[650ms] ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform z-20 scale-125 md:scale-[1.5] origin-bottom opacity-100 rounded-[28px] border border-zinc-200 bg-zinc-50 overflow-hidden shadow-xl block cursor-pointer"
+            data-index="0">
+            <img src="public/vipal.jpeg" alt="Itabuna - Central Pneus (Matriz)" width="1448" height="1086" loading="lazy"
+              class="w-full h-full object-cover pointer-events-none select-none">
+          </a>
+
+          <!-- Filial 2 (Itabuna - Central Autocenter) -->
+          <a href="https://www.google.com/maps/search/?api=1&query=Central%20Auto%20Center%20-%20BR-415%2C%204249%20-%20Centro%20Industrial%2C%20Itabuna%20-%20BA%2C%2045613-000"
+            target="_blank"
+            class="carousel-item absolute left-[80%] md:left-[72%] bottom-[12%] w-[50%] md:w-[35%] aspect-[16/9] -translate-x-1/2 transition-all duration-[650ms] ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform z-10 scale-[0.8] md:scale-[0.95] origin-bottom opacity-85 blur-[2px] rounded-[28px] border border-zinc-200 bg-zinc-50 overflow-hidden shadow-lg block cursor-pointer"
+            data-index="1">
+            <img src="public/autocenter.jpg" alt="Itabuna - Central Autocenter" width="1600" height="900" loading="lazy"
+              class="w-full h-full object-cover pointer-events-none select-none" onerror="this.style.display='none'">
+          </a>
+
+          <!-- Filial 3 (Santo Antônio de Jesus - Saj Pneus) -->
+          <div
+            class="carousel-item absolute left-[20%] md:left-[32%] bottom-[12%] w-[50%] md:w-[35%] aspect-[16/9] -translate-x-1/2 transition-all duration-[650ms] ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform z-10 scale-[0.8] md:scale-[0.95] origin-bottom opacity-85 blur-[2px] rounded-[28px] border border-zinc-200 bg-zinc-50 overflow-hidden shadow-lg"
+            data-index="2">
+            <img src="public/saj.jpeg" alt="Santo Antônio de Jesus - Saj Pneus" loading="lazy"
+              class="w-full h-full object-cover pointer-events-none select-none" onerror="this.style.display='none'">
+          </div>
+
+          <!-- Filial 4 (Itabuna - Central Autocar) -->
+          <a href="https://www.google.com/maps/place/CENTRAL+AUTOCAR+-+ITABUNA+-+Pneus,+Oficina+mec%C3%A2nica+e+Troca+de+%C3%93leo/@-14.8071941,-39.2751762,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhDmi5JALkqoTqJFe67iyRrR!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FAPNQkAHWdfcdbfhxCO3GlMNKgXTBL040WB_Q-iKIaO_ZrulkzZJ79zoWFKlrqg5r3h1O7vHcdMSA44k-BMVWkeAcd_uGXvupsUCsmsODHuNQ0fqWyyMhFFYmGfUECeFkvhyz7Bts5vY7_3cjOAY%3Dw203-h114-k-no!7i1600!8i900!4m7!3m6!1s0x739ab54cfa1e1b3:0xfac8cf37ce8eec69!8m2!3d-14.8072971!4d-39.2751285!10e5!16s%2Fg%2F11z4b0lc_1?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D#"
+            target="_blank"
+            class="carousel-item absolute left-1/2 bottom-[12%] w-[50%] md:w-[35%] aspect-[16/9] -translate-x-1/2 transition-all duration-[650ms] ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform z-5 scale-[0.7] md:scale-[0.8] origin-bottom opacity-0 blur-[4px] rounded-[28px] border border-zinc-200 bg-zinc-50 overflow-hidden shadow-md block cursor-pointer"
+            data-index="3">
+            <img src="public/centralautocar.jpg" alt="Itabuna - Central Autocar" width="1654" height="951" loading="lazy"
+              class="w-full h-full object-cover pointer-events-none select-none" onerror="this.style.display='none'" />
+          </a>
+        </div>
+      </div>
+
+      <!-- 5. Bottom-left details + Nav buttons -->
+      <div
+        class="relative md:absolute bottom-auto md:bottom-16 left-auto md:left-12 mt-8 md:mt-0 px-6 md:px-0 flex flex-col gap-4 max-w-full md:max-w-md"
+        style="z-index: 60;">
+        <div>
+          <h3 id="filialTitle" class="text-3xl md:text-5.5xl text-zinc-950 leading-none mb-1 tracking-tight"
+            style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
+            Itabuna - Central Pneus
+          </h3>
+          <p id="filialAddress" class="text-xs md:text-sm text-zinc-500 font-normal tracking-wide leading-relaxed">
+            BR-415, 4249 - Centro Industrial, Itabuna - BA, 45613-000
+          </p>
+          <!-- Status Pill with Pulsing Dot for WhatsApp -->
+          <div
+            class="inline-flex items-center gap-1.5 mt-2 px-2.5 py-1 bg-zinc-100 rounded-full border border-zinc-200/50">
+            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+            <span id="filialPhone" class="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-zinc-600">
+              WhatsApp: (73) 99174-1441
+            </span>
+          </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="flex items-center gap-3 mt-1">
+          <button id="btnPrevFilial"
+            class="w-12 h-12 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-900 bg-white/80 hover:bg-zinc-50 hover:scale-105 active:scale-95 transition-all duration-150 shadow-sm cursor-pointer">
+            <i data-lucide="arrow-left" class="w-5 h-5" stroke-width="2"></i>
+          </button>
+          <button id="btnNextFilial"
+            class="w-12 h-12 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-900 bg-white/80 hover:bg-zinc-50 hover:scale-105 active:scale-95 transition-all duration-150 shadow-sm cursor-pointer">
+            <i data-lucide="arrow-right" class="w-5 h-5" stroke-width="2"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 6. Bottom-right link (Como Chegar) -->
+      <div
+        class="relative md:absolute bottom-auto md:bottom-16 right-auto md:right-12 mt-6 md:mt-0 px-6 md:px-0 pb-6 md:pb-0"
+        style="z-index: 60;">
+        <a id="btnFilialMap"
+          href="https://www.google.com/maps/search/?api=1&query=Central%20Auto%20Center%20-%20BR-415%2C%204249%20-%20Centro%20Industrial%2C%20Itabuna%20-%20BA%2C%2045613-000"
+          target="_blank"
+          class="group flex items-center gap-1 text-zinc-950 hover:text-zinc-800 transition-colors uppercase leading-none"
+          style="font-family: 'Anton', sans-serif; font-size: clamp(32px, 5.5vw, 64px); letter-spacing: -0.01em;">
+          <span>Como chegar</span>
+          <i data-lucide="arrow-up-right"
+            class="w-6 h-6 md:w-8 md:h-8 text-zinc-950 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+            stroke-width="1.5"></i>
+        </a>
+      </div>
+
+    </div> <!-- Close the Top Area Wrapper -->
+
+    <!-- Contact & Info Area (Below Carousel) -->
+    <section class="w-full bg-zinc-950 py-20 px-6 relative z-10 shrink-0 border-t border-zinc-900">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <!-- Left: Company Info -->
+        <div class="flex flex-col gap-6 text-zinc-400">
+          <div>
+            <h2 class="text-3xl md:text-5xl text-white tracking-tight mb-2"
+              style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
+              Sempre perto de você
+            </h2>
+            <p class="text-sm md:text-base max-w-sm">
+              Com 4 unidades estratégicas na Bahia, a Central Autocenter garante agilidade e excelência no cuidado do
+              seu veículo.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4 mt-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center border border-zinc-800">
+                <i data-lucide="clock" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <div>
+                <p class="text-xs font-black uppercase tracking-widest text-zinc-500">Horário de Funcionamento</p>
+                <p class="text-sm text-zinc-300">Segunda a Sexta: 8h às 17h30<br>Sábado: 8h às 12h</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center border border-zinc-800">
+                <i data-lucide="mail" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <div>
+                <p class="text-xs font-black uppercase tracking-widest text-zinc-500">E-mail Comercial</p>
+                <p class="text-sm text-zinc-300">contato@centralautocenter.com.br</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center border border-zinc-800">
+                <i data-lucide="shield-check" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <div>
+                <p class="text-xs font-black uppercase tracking-widest text-zinc-500">Garantia de Qualidade</p>
+                <p class="text-sm text-zinc-300">Profissionais qualificados e peças originais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div
+          class="bg-zinc-900/50 backdrop-blur-md border border-zinc-800/50 rounded-3xl p-6 md:p-8 shadow-2xl flex flex-col gap-5 relative overflow-hidden">
+          <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[150px] h-[1px] bg-emerald-500 shadow-[0_0_15px_rgba(72,186,7,0.8)]">
+          </div>
+
+          <div class="text-center mb-2">
+            <h3 class="text-2xl text-white tracking-tight mb-1"
+              style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
+              Agende um serviço
+            </h3>
+            <p class="text-zinc-400 text-xs">
+              Preencha para falar com a filial selecionada.
+            </p>
+          </div>
+
+          <form class="flex flex-col gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="flex flex-col gap-1.5">
+                <label class="text-[10px] font-black uppercase tracking-widest text-emerald-500 ml-1">Seu Nome</label>
+                <input type="text" placeholder="Ex: João Silva"
+                  class="bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-emerald-500/50 transition-colors text-sm">
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label class="text-[10px] font-black uppercase tracking-widest text-emerald-500 ml-1">Telefone /
+                  WhatsApp</label>
+                <input type="text" placeholder="(00) 00000-0000"
+                  class="bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-emerald-500/50 transition-colors text-sm">
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[10px] font-black uppercase tracking-widest text-emerald-500 ml-1">Filial</label>
+              <select
+                class="bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500/50 transition-colors text-sm appearance-none">
+                <option value="itabuna-central-pneus">Itabuna - Central Pneus (Matriz)</option>
+                <option value="itabuna-autocenter">Itabuna - Central Autocenter</option>
+                <option value="saj">Santo Antonio de Jesus - Saj Pneus</option>
+                <option value="itabuna-autocar">Itabuna - Central Autocar</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[10px] font-black uppercase tracking-widest text-emerald-500 ml-1">Mensagem</label>
+              <textarea rows="3" placeholder="Como podemos ajudar?"
+                class="bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-emerald-500/50 transition-colors text-sm resize-none"></textarea>
+            </div>
+
+            <button type="button"
+              class="mt-2 bg-emerald-500 text-zinc-950 font-extrabold uppercase tracking-widest text-xs py-4 rounded-xl hover:bg-emerald-400 hover:shadow-[0_0_20px_rgba(72,186,7,0.3)] transition-all duration-300">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Social Icons Footer (Simplified) -->
+  <footer class="relative z-10 w-full bg-black">
+    <div
+      class="flex flex-col md:flex-row items-center justify-between px-12 py-6 md:py-8 gap-4 text-xs text-zinc-400 max-w-6xl mx-auto">
+      <!-- Info -->
+      <div class="flex flex-col items-center md:items-start gap-1">
+        <div class="flex items-center gap-1.5 text-zinc-300 font-medium">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-zinc-500"></i>
+          <span>BR-415, 4249 - Centro Industrial, Itabuna - BA, 45613-000</span>
+        </div>
+        <p class="pl-5 text-[10px]">Segunda a Sexta: 8h às 17h30 | Sábado: 8h às 12h</p>
+      </div>
+
+      <!-- Copyright -->
+      <div>
+        <span>© 2026 Central Autocenter. Todos os direitos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pneuzinho Chatbot Widget -->
+  <div id="pneuzinho-chatbot" class="fixed bottom-6 right-6 z-50 flex flex-col items-end font-sans">
+    <!-- Chat Widget Bubble (Floating Button) -->
+    <button id="chatbot-toggle-btn"
+      class="flex items-center gap-2 sm:gap-3 bg-zinc-950 text-white rounded-full p-2.5 sm:pl-4 sm:pr-5 sm:py-3 hover-glow-green shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 group cursor-pointer border border-zinc-800">
+      <!-- Notification pulsing indicator -->
+      <span class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+      </span>
+      <img src="public/pneuzinho.jpg" alt="Pneuzinho avatar" width="1024" height="1024"
+        class="w-8 h-8 rounded-full border border-brand-green object-cover shrink-0">
+      <span
+        class="hidden sm:inline-block text-xs sm:text-sm font-black tracking-tight text-white group-hover:text-brand-green transition-colors whitespace-nowrap">
+        Fale com o Pneuzinho! 💬
+      </span>
+    </button>
+
+    <!-- Chat Window Widget (initially hidden) -->
+    <div id="chatbot-window"
+      class="hidden w-full h-[100dvh] sm:w-[380px] sm:h-[550px] fixed sm:relative inset-0 sm:inset-auto bg-white/95 backdrop-blur-xl sm:rounded-[28px] border-0 sm:border border-zinc-200 shadow-2xl flex-col overflow-hidden transition-all duration-300 translate-y-4 opacity-0 origin-bottom-right sm:mb-4 z-50">
+      <!-- Header -->
+      <div class="bg-zinc-950 text-white px-5 py-4 flex items-center justify-between border-b border-zinc-800 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <img src="public/pneuzinho.jpg" alt="Pneuzinho Avatar" width="1024" height="1024"
+              class="w-10 h-10 rounded-full border border-brand-green object-cover">
+            <span
+              class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 border border-zinc-950 rounded-full"></span>
+          </div>
+          <div>
+            <h4 class="font-extrabold text-sm text-white tracking-tight leading-none">Pneuzinho</h4>
+            <span class="text-[10px] font-semibold text-zinc-400">Sempre pronto para ajudar!</span>
+          </div>
+        </div>
+        <button id="chatbot-close-btn"
+          class="p-2 rounded-full hover:bg-zinc-800 text-zinc-400 hover:text-white transition-colors cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Chat History (Messages Area) -->
+      <div id="chatbot-messages" class="flex-1 overflow-y-auto p-5 space-y-4 bg-zinc-50/50">
+        <!-- Message bubbles will be dynamically loaded here by JS -->
+      </div>
+
+      <!-- Footer / Clear button (Optional status bar) -->
+      <div class="px-5 py-3 border-t border-zinc-150 bg-white flex items-center justify-center shrink-0">
+        <p class="text-[10px] text-zinc-400 font-semibold uppercase tracking-wider flex items-center gap-1.5">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-zinc-400"></i> Atendimento Seguro e Rápido
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Logic Scripts -->
+  <script src="app.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+
+</html>
