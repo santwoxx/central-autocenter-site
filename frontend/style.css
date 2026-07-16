@@ -310,7 +310,8 @@ body {
   width: max-content;
   gap: 1.5rem;
   padding: 0 2rem;
-  animation: reviewsMarquee 28s linear infinite;
+  /* 13 avaliacoes por volta (eram 3 em 28s) - duracao maior mantem a mesma velocidade */
+  animation: reviewsMarquee 120s linear infinite;
 }
 
 .reviews-marquee-wrapper:hover .reviews-marquee-track {
