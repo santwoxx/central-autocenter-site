@@ -25,3 +25,6 @@ _backup_duplicatas/
 
 # Frames da animacao antiga (222 MB, nao usados pelo site - substituidos por vd3.mp4)
 frontend/public/frames/
+
+# Original pesado da foto da loja (o site usa a versao otimizada autocenter.jpg)
+frontend/public/autocenter.png

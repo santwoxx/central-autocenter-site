@@ -652,6 +652,14 @@ function switchTab(tabId) {
 
       // Trigger staggered card animations
       if (tabId === 'servicos' && servicosContent) {
+        // Lazy-load do video da aba (11 MB): so baixa na primeira abertura
+        const frameVideo = document.getElementById('frameVideo');
+        if (frameVideo && !frameVideo.getAttribute('src') && frameVideo.dataset.src) {
+          frameVideo.src = frameVideo.dataset.src;
+          frameVideo.load();
+          const playPromise = frameVideo.play();
+          if (playPromise) playPromise.catch(() => {});
+        }
         servicosContent.classList.remove('services-active');
         void servicosContent.offsetWidth; // force reflow
         const isMobileDevice = window.innerWidth < 768;

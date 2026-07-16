@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="public/logo.png">
+  <link rel="icon" type="image/png" href="public/logo-icon.png">
 
   <!-- Preconnect to third-party origins used on first paint -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.tailwindcss.com">
-  <link rel="preconnect" href="https://unpkg.com">
+
+  <!-- LCP: first home banner, requested early at high priority -->
+  <link rel="preload" as="image" href="public/banner1.jpg" fetchpriority="high">
 
   <!-- Instrument Serif, Inter and Anton in a single combined request -->
   <link
@@ -19,7 +20,7 @@
 
   <!-- Security Meta Tags -->
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://www.googletagmanager.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self' data: https:; connect-src 'self' https://firestore.googleapis.com https://firebase.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://www.google-analytics.com https://unpkg.com https://firebaseinstallations.googleapis.com https://www.gstatic.com;">
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self' data: https:; connect-src 'self' https://firestore.googleapis.com https://firebase.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://www.google-analytics.com https://firebaseinstallations.googleapis.com https://www.gstatic.com;">
 
   <!-- Anti-Clickjacking Frame Buster -->
   <style id="antiClickjack">
@@ -117,62 +118,13 @@
     content="Seu auto center de confiança. Pneus novos, alinhamento 3D e mecânica geral com garantia.">
   <meta name="twitter:image" content="https://centralautocenter.com.br/public/logo.png">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              green: '#48ba07',
-              dark: '#121212',
-              gray: '#F4F4F5',
-            },
-            // Site's green/orange accents (emerald-*, amber-*) remapped
-            // to the brand palette instead of Tailwind's stock hues.
-            emerald: {
-              50: '#f3fbea',
-              100: '#e2f7cf',
-              200: '#c5efa2',
-              300: '#9ee36a',
-              400: '#75d235',
-              500: '#48ba07',
-              600: '#3a9906',
-              700: '#2e7607',
-              800: '#285d0b',
-              900: '#234f0d',
-              950: '#0f2b04',
-            },
-            amber: {
-              50: '#fdf7ed',
-              100: '#fbedd9',
-              200: '#f7d9ae',
-              300: '#f1c27c',
-              400: '#eba53f',
-              500: '#e58903',
-              600: '#bc7002',
-              700: '#9c5d02',
-              800: '#7c4a02',
-              900: '#603a01',
-              950: '#402601',
-            },
-          },
-          fontFamily: {
-            serif: ["'Instrument Serif'", 'serif'],
-            sans: ['Inter', 'sans-serif'],
-            anton: ["'Anton'", 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-
   <!-- Custom CSS for Liquid Glass & Base Rules -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Tailwind compilado estaticamente (substitui o compilador via CDN, que
+       bloqueava a renderizacao). Apos mudar classes no index.html/app.js/chatbot.js,
+       regere com: npx tailwindcss@3.4.17 -c tailwind.config.js -i tailwind-input.css -o tailwind.css --minify -->
+  <link rel="stylesheet" href="tailwind.css">
 
   <!-- Firebase Analytics (modular CDN) -->
   <script type="module" src="firebase-config.js"></script>
@@ -201,7 +153,7 @@
     <nav class="flex items-center justify-between w-full px-3 sm:px-4 md:px-12 py-2.5 sm:py-3 md:py-4 gap-2">
       <!-- Logo -->
       <div class="flex items-center gap-1 sm:gap-1.5 md:gap-2 group cursor-pointer shrink-0">
-        <img src="public/logo.png" alt="Logo Central Autocenter" width="768" height="512"
+        <img src="public/logo-nav.jpg" alt="Logo Central Autocenter" width="240" height="160"
           class="h-8 sm:h-10 md:h-16 w-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-105">
         <span
           class="text-white font-extrabold text-[11px] sm:text-[13px] md:text-base tracking-tight whitespace-nowrap">
@@ -235,19 +187,19 @@
           onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá Central Autocenter! Vi o banner no site e gostaria de consultar as ofertas de pneus.'); if(window.CA_Analytics)window.CA_Analytics.trackBannerClick('banner1_home');"
           target="_blank" class="w-1/3 shrink-0 block cursor-pointer">
           <img src="public/banner1.jpg" alt="Promoções Central Autocenter" width="2172" height="724"
-            class="w-full aspect-[3/1] object-cover block" />
+            fetchpriority="high" decoding="async" class="w-full aspect-[3/1] object-cover block" />
         </a>
         <a href="#"
           onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá Central Autocenter! Vi o banner de ofertas de serviços no site e gostaria de solicitar um orçamento.'); if(window.CA_Analytics)window.CA_Analytics.trackBannerClick('banner2_home');"
           target="_blank" class="w-1/3 shrink-0 block cursor-pointer">
           <img src="public/banner2.jpg" alt="Ofertas Central Autocenter" width="2172" height="724"
-            class="w-full aspect-[3/1] object-cover block" />
+            loading="lazy" decoding="async" class="w-full aspect-[3/1] object-cover block" />
         </a>
         <a href="#"
           onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá Central Autocenter! Vi o banner no site e quero saber mais sobre pneus novos, peças e serviços.'); if(window.CA_Analytics)window.CA_Analytics.trackBannerClick('banner3_home');"
           target="_blank" class="w-1/3 shrink-0 block cursor-pointer">
           <img src="public/banner3.jpg" alt="Central Autocenter - Mais do que uma oficina, um novo padrão" width="1600"
-            height="533" class="w-full aspect-[3/1] object-cover block" />
+            height="533" loading="lazy" decoding="async" class="w-full aspect-[3/1] object-cover block" />
         </a>
       </div>
       <!-- Slide indicator dots -->
@@ -526,7 +478,8 @@
         <!-- RIGHT: Video Panel -->
         <div id="videoPanel"
           class="flex-1 relative w-full md:max-w-[60%] h-full min-h-[40vh] md:min-h-[75vh] overflow-visible pointer-events-none md:ml-auto md:translate-x-8">
-          <video id="frameVideo" src="public/vd3.mp4" autoplay loop playsinline muted preload="auto"
+          <!-- src atribuido via JS apenas quando a aba Servicos abre (economiza 11 MB no carregamento inicial) -->
+          <video id="frameVideo" data-src="public/vd3.mp4" autoplay loop playsinline muted preload="none"
             class="service-video-custom absolute mix-blend-multiply transform-gpu brightness-[1.05] contrast-[1.08] select-none w-full h-full object-contain object-right">
           </video>
           <!-- Loading indicator -->
@@ -1278,7 +1231,8 @@
     </div>
   </div>
 
-  <!-- Core Logic Scripts -->
+  <!-- Core Logic Scripts (Lucide self-hosted: sem CDN externo) -->
+  <script src="lucide.min.js"></script>
   <script src="app.js"></script>
   <script src="chatbot.js"></script>
 </body>
