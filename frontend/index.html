@@ -1544,35 +1544,40 @@
           </div>
         </div>
 
-        <!-- 5. Final CTA -->
-        <div data-scroll-anim data-anim="hero-reveal" class="w-full text-center relative overflow-hidden py-6">
-          <!-- Decorative floating glows -->
-          <div
-            class="absolute top-0 left-1/4 -translate-x-1/2 w-72 h-72 bg-brand-green/10 rounded-full blur-[90px] pointer-events-none float-slow">
-          </div>
-          <div
-            class="absolute bottom-0 right-1/4 translate-x-1/2 w-72 h-72 bg-emerald-500/10 rounded-full blur-[90px] pointer-events-none float-slow"
-            style="animation-delay: 1.5s"></div>
-
-          <div class="relative z-10 flex flex-col items-center">
-            <div
-              class="cta-icon-badge mb-6 w-16 h-16 rounded-full bg-brand-green/10 border border-brand-green/30 flex items-center justify-center">
-              <i data-lucide="shield-check" class="w-7 h-7 text-brand-green"></i>
-            </div>
-            <h2 class="text-3xl md:text-5xl text-white mb-4 tracking-tight leading-none"
+        <!-- 5. Nosso Espaço (Gallery) -->
+        <div data-scroll-anim data-anim="hero-reveal" class="w-full relative overflow-hidden py-10 md:py-16">
+          <div class="relative z-10 flex flex-col items-center mb-10 text-center px-4">
+            <h2 class="text-3xl md:text-5xl text-white tracking-tight leading-none"
               style="font-family: 'Anton', sans-serif; text-transform: uppercase;">
-              Seu carro merece o <span class="text-brand-green">melhor cuidado</span>
+              Nosso <span class="text-brand-green">Espaço</span>
             </h2>
-            <p class="text-sm md:text-base text-zinc-300 font-medium max-w-md mx-auto mb-8">
-              Agende agora um check-up preventivo gratuito e rode com segurança e tranquilidade.
+            <p class="text-sm md:text-base text-zinc-400 mt-3 max-w-lg">
+              Conheça a infraestrutura moderna da Central Autocenter, projetada para cuidar do seu veículo com o mais alto padrão.
             </p>
-            <a href="#"
-              onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá! Gostaria de agendar um check-up preventivo gratuito.')"
-              target="_self" target="_blank"
-              class="cta-pulse-btn hover-glow-green bg-brand-green text-zinc-950 px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:scale-105 active:scale-95 transition-all shadow-xl flex items-center gap-2">
-              <i data-lucide="message-circle" class="w-4 h-4 text-zinc-950"></i>
-              Agendar via WhatsApp
-            </a>
+          </div>
+          
+          <div class="relative z-10 max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+              <!-- Gallery items (User will place espaco1.jpg ... espaco5.jpg in public folder) -->
+              <a href="public/espaco1.jpg" target="_blank" class="block overflow-hidden rounded-2xl aspect-square group bg-zinc-900 border border-zinc-800 shadow-lg">
+                <img src="public/espaco1.jpg" alt="Nosso Espaço 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-100" onerror="this.src='public/logo-nav.jpg'; this.classList.add('opacity-10', 'object-contain', 'p-8')" />
+              </a>
+              <a href="public/espaco2.jpg" target="_blank" class="block overflow-hidden rounded-2xl aspect-square group bg-zinc-900 border border-zinc-800 shadow-lg">
+                <img src="public/espaco2.jpg" alt="Nosso Espaço 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-100" onerror="this.src='public/logo-nav.jpg'; this.classList.add('opacity-10', 'object-contain', 'p-8')" />
+              </a>
+              <a href="public/espaco3.jpg" target="_blank" class="block overflow-hidden rounded-2xl aspect-square group bg-zinc-900 border border-zinc-800 shadow-lg hidden md:block">
+                <img src="public/espaco3.jpg" alt="Nosso Espaço 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-100" onerror="this.src='public/logo-nav.jpg'; this.classList.add('opacity-10', 'object-contain', 'p-8')" />
+              </a>
+              <a href="public/espaco4.jpg" target="_blank" class="block overflow-hidden rounded-2xl aspect-[4/3] md:aspect-auto md:col-span-2 group bg-zinc-900 border border-zinc-800 shadow-lg">
+                <img src="public/espaco4.jpg" alt="Nosso Espaço 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-100" onerror="this.src='public/logo-nav.jpg'; this.classList.add('opacity-10', 'object-contain', 'p-10')" />
+              </a>
+              <a href="public/espaco5.jpg" target="_blank" class="block overflow-hidden rounded-2xl aspect-square md:aspect-auto group bg-zinc-900 border border-zinc-800 shadow-lg">
+                <img src="public/espaco5.jpg" alt="Nosso Espaço 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-100" onerror="this.src='public/logo-nav.jpg'; this.classList.add('opacity-10', 'object-contain', 'p-8')" />
+              </a>
+            </div>
+            <p class="text-xs text-center text-zinc-600 mt-6 md:mt-8 tracking-wide">
+              * Para atualizar as fotos, coloque as imagens espaco1.jpg até espaco5.jpg na pasta public
+            </p>
           </div>
         </div>
 
