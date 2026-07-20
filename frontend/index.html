@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- LCP: first home banner, requested early at high priority -->
-  <link rel="preload" as="image" href="public/banner1.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="public/banner1.png" fetchpriority="high">
 
   <!-- Instrument Serif, Inter and Anton in a single combined request -->
   <link
@@ -131,7 +131,7 @@
 </head>
 
 <body
-  class="min-h-[160vh] bg-white text-zinc-900 relative font-sans flex flex-col justify-between selection:bg-brand-green selection:text-black overflow-x-hidden">
+  class="min-h-[160vh] bg-white text-brand-green relative font-sans flex flex-col justify-between selection:bg-brand-green selection:text-black overflow-x-hidden">
 
 
 
@@ -149,7 +149,7 @@
   </div>
 
   <!-- Header Navigation (Full-width Sticky Bar) -->
-  <header class="fixed top-0 left-0 right-0 z-20 bg-black shadow-lg">
+  <header class="fixed top-0 left-0 right-0 z-20 bg-brand-dark shadow-lg">
     <nav class="flex items-center justify-between w-full px-3 sm:px-4 md:px-12 py-2.5 sm:py-3 md:py-4 gap-2">
       <!-- Logo -->
       <div class="flex items-center gap-1 sm:gap-1.5 md:gap-2 group cursor-pointer shrink-0">
@@ -178,45 +178,27 @@
   </header>
 
   <main id="heroContent"
-    class="relative z-10 flex-1 w-full pt-14 sm:pt-16 md:pt-24 pb-12 transition-all duration-100 bg-black">
+    class="relative z-10 flex-1 w-full pt-14 sm:pt-16 md:pt-24 pb-12 transition-all duration-100 bg-brand-dark">
     <!-- Home Banners Carousel (banner1.png + banner2.png + banner3.png, auto-slides sideways) -->
     <div
       class="w-[calc(100%+3rem)] -mx-6 md:w-screen md:relative md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] md:mx-0 relative overflow-hidden shadow-md bg-white mb-10 animate-fade-in-up">
-      <div id="bannerSlideTrack" class="flex transition-transform duration-700 ease-in-out" style="width: 300%;">
+      <div id="bannerSlideTrack" class="flex transition-transform duration-700 ease-in-out" style="width: 100%;">
         <a href="#"
           onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá Central Autocenter! Vi o banner no site e gostaria de consultar as ofertas de pneus.'); if(window.CA_Analytics)window.CA_Analytics.trackBannerClick('banner1_home');"
-          target="_blank" class="w-1/3 shrink-0 block cursor-pointer">
-          <img src="public/banner1.jpg" alt="Promoções Central Autocenter" width="2172" height="724"
+          target="_blank" class="w-full shrink-0 block cursor-pointer">
+          <img src="public/banner1.png" alt="Promoções Central Autocenter" width="2172" height="724"
             fetchpriority="high" decoding="async" class="w-full aspect-[3/1] object-cover block" />
         </a>
-        <a href="#"
-          onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá Central Autocenter! Vi o banner de ofertas de serviços no site e gostaria de solicitar um orçamento.'); if(window.CA_Analytics)window.CA_Analytics.trackBannerClick('banner2_home');"
-          target="_blank" class="w-1/3 shrink-0 block cursor-pointer">
-          <img src="public/banner2.jpg" alt="Ofertas Central Autocenter" width="2172" height="724"
-            loading="lazy" decoding="async" class="w-full aspect-[3/1] object-cover block" />
-        </a>
-        <a href="#"
-          onclick="openSecureWA(event, ['55','73','99174','1441'], 'Olá Central Autocenter! Vi o banner no site e quero saber mais sobre pneus novos, peças e serviços.'); if(window.CA_Analytics)window.CA_Analytics.trackBannerClick('banner3_home');"
-          target="_blank" class="w-1/3 shrink-0 block cursor-pointer">
-          <img src="public/banner3.jpg" alt="Central Autocenter - Mais do que uma oficina, um novo padrão" width="1600"
-            height="533" loading="lazy" decoding="async" class="w-full aspect-[3/1] object-cover block" />
-        </a>
       </div>
-      <!-- Slide indicator dots -->
-      <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-        <button class="banner-dot w-1.5 h-1.5 rounded-full bg-zinc-900 transition-all" data-slide="0"
-          aria-label="Banner 1"></button>
-        <button class="banner-dot w-1.5 h-1.5 rounded-full bg-zinc-900/25 transition-all" data-slide="1"
-          aria-label="Banner 2"></button>
-        <button class="banner-dot w-1.5 h-1.5 rounded-full bg-zinc-900/25 transition-all" data-slide="2"
-          aria-label="Banner 3"></button>
+      <!-- Slide indicator dots removed because there is only 1 banner -->
+      <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 hidden">
       </div>
     </div>
 
     <!-- Split Hero: left half dark green (text), right half white (video 1), edge-to-edge -->
     <div class="w-full flex flex-col md:flex-row md:items-stretch">
 
-      <!-- LEFT HALF: transparent, shows heroContent's own bg-black -->
+      <!-- LEFT HALF: transparent, shows heroContent's own bg-brand-dark -->
       <div
         class="relative w-full md:w-1/2 flex flex-col items-center md:items-start justify-center text-center md:text-left px-6 md:pl-6 lg:pl-16 md:pr-10 py-12 md:py-16 overflow-hidden">
         
@@ -249,7 +231,7 @@
           <div class="space-y-4 relative z-30 float-slow">
             <!-- Search Input Container -->
             <div
-              class="bg-black border border-white/10 rounded-full pl-4 sm:pl-6 pr-2 py-2 flex items-center gap-2 sm:gap-3 shadow-2xl transition-all duration-300 hover:border-brand-green/60 w-full">
+              class="bg-brand-dark border border-white/10 rounded-full pl-4 sm:pl-6 pr-2 py-2 flex items-center gap-2 sm:gap-3 shadow-2xl transition-all duration-300 hover:border-brand-green/60 w-full">
               <i data-lucide="search" class="w-5 h-5 text-brand-green shrink-0" stroke-width="2.5"></i>
               <input type="text" id="tireSearchInput" placeholder="Busque por medida (ex: 205/55 R16)..."
                 class="bg-transparent border-none outline-none flex-1 text-white placeholder:text-zinc-500 text-sm sm:text-base py-1 font-bold w-full min-w-0"
@@ -359,7 +341,7 @@
             </div>
             <div>
               <h4
-                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-brand-green group-hover:text-emerald-600 transition-colors">
                 Alinhamento & Balanceamento 3D</h4>
               <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">Precisão
                 a laser, direção alinhada e pneus equilibrados.</p>
@@ -380,7 +362,7 @@
             </div>
             <div>
               <h4
-                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-brand-green group-hover:text-emerald-600 transition-colors">
                 Troca de Óleo & Filtros</h4>
               <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">
                 Lubrificantes e filtros recomendados para manter o motor protegido.</p>
@@ -401,7 +383,7 @@
             </div>
             <div>
               <h4
-                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-brand-green group-hover:text-emerald-600 transition-colors">
                 Troca do Fluido do Câmbio</h4>
               <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">
                 Substituição completa do fluido para proteger a transmissão automática.</p>
@@ -422,7 +404,7 @@
             </div>
             <div>
               <h4
-                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-brand-green group-hover:text-emerald-600 transition-colors">
                 Suspensão & Freios</h4>
               <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">
                 Diagnóstico completo de amortecedores, pastilhas e discos.</p>
@@ -443,7 +425,7 @@
             </div>
             <div>
               <h4
-                class="text-[14px] md:text-[15px] font-black tracking-tight text-zinc-900 group-hover:text-emerald-600 transition-colors">
+                class="text-[14px] md:text-[15px] font-black tracking-tight text-brand-green group-hover:text-emerald-600 transition-colors">
                 Mecânica Geral & Diagnóstico</h4>
               <p class="text-[11px] md:text-xs text-zinc-500 font-medium leading-relaxed tracking-wide mt-0.5">Motor,
                 correias, injeção eletrônica e reparos com garantia.</p>
@@ -495,7 +477,7 @@
     <!-- End Top Wrapper -->
 
     <!-- Everything after the video: solid black, full-bleed -->
-    <div class="w-full bg-black pt-16 pb-16 md:pt-24 md:pb-24">
+    <div class="w-full bg-brand-dark pt-16 pb-16 md:pt-24 md:pb-24">
       <!-- New Conversion Sections -->
       <div class="w-full flex flex-col gap-16 md:gap-24 relative z-10 max-w-5xl mx-auto px-6">
 
@@ -507,17 +489,17 @@
               <i data-lucide="shield-check" class="w-6 h-6"></i>
             </div>
             <div>
-              <h5 class="text-sm font-bold text-zinc-900">Garantia Total</h5>
+              <h5 class="text-sm font-bold text-brand-green">Garantia Total</h5>
               <p class="text-[11px] text-zinc-500 mt-0.5">90 dias em todos os serviços</p>
             </div>
           </div>
           <div data-scroll-anim data-anim="hero-fade" style="animation-delay: 120ms"
             class="flex items-center gap-4 bg-white/90 backdrop-blur-md rounded-2xl p-5 border border-zinc-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-            <div class="w-12 h-12 rounded-full bg-zinc-900 flex items-center justify-center text-emerald-400 shrink-0">
+            <div class="w-12 h-12 rounded-full bg-brand-green flex items-center justify-center text-emerald-400 shrink-0">
               <i data-lucide="wrench" class="w-6 h-6"></i>
             </div>
             <div>
-              <h5 class="text-sm font-bold text-zinc-900">Peças Originais</h5>
+              <h5 class="text-sm font-bold text-brand-green">Peças Originais</h5>
               <p class="text-[11px] text-zinc-500 mt-0.5">Qualidade e durabilidade garantidas</p>
             </div>
           </div>
@@ -525,7 +507,7 @@
 
         <!-- 2. Why Choose Us -->
         <div data-scroll-anim data-anim="hero-reveal"
-          class="bg-zinc-900 rounded-[2rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl border border-zinc-800">
+          class="bg-brand-green rounded-[2rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl border border-zinc-800">
           <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none">
           </div>
           <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none">
@@ -573,7 +555,7 @@
                 </li>
               </ul>
             </div>
-            <div class="flex-1 w-full h-[350px] bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+            <div class="flex-1 w-full h-[350px] bg-brand-green rounded-2xl overflow-hidden border border-zinc-800">
               <img src="public/autocenter.jpg" alt="Oficina Central Autocenter" width="1600" height="900"
                 loading="lazy"
                 class="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 cursor-pointer">
@@ -625,7 +607,7 @@
                         NO
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Nicolas Oliveira</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Nicolas Oliveira</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Local Guide · Google</span>
                       </div>
                     </div>
@@ -660,7 +642,7 @@
                         EF
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Erick Fernandes</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Erick Fernandes</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -695,7 +677,7 @@
                         JE
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Jailson Eça</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Jailson Eça</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -730,7 +712,7 @@
                         FP
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Florisvaldo Paixâo</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Florisvaldo Paixâo</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Local Guide · Google</span>
                       </div>
                     </div>
@@ -765,7 +747,7 @@
                         RX
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Ronald Xavier</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Ronald Xavier</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -800,7 +782,7 @@
                         JS
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Jorge Silva</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Jorge Silva</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -835,7 +817,7 @@
                         AG
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">André Guimarães</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">André Guimarães</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -870,7 +852,7 @@
                         WM
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Wadson Matos</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Wadson Matos</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -905,7 +887,7 @@
                         AA
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">adriano andrade santos</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">adriano andrade santos</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Local Guide · Google</span>
                       </div>
                     </div>
@@ -940,7 +922,7 @@
                         RV
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Ricardo Vanacker</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Ricardo Vanacker</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -975,7 +957,7 @@
                         GM
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Gabriel marques santos</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Gabriel marques santos</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1010,7 +992,7 @@
                         MI
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Miguel</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Miguel</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1045,7 +1027,7 @@
                         DB
                       </div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Danilo Bomfim</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Danilo Bomfim</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1080,7 +1062,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         NO</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Nicolas Oliveira</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Nicolas Oliveira</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Local Guide · Google</span>
                       </div>
                     </div>
@@ -1113,7 +1095,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         EF</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Erick Fernandes</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Erick Fernandes</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1146,7 +1128,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         JE</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Jailson Eça</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Jailson Eça</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1179,7 +1161,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         FP</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Florisvaldo Paixâo</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Florisvaldo Paixâo</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Local Guide · Google</span>
                       </div>
                     </div>
@@ -1212,7 +1194,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         RX</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Ronald Xavier</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Ronald Xavier</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1245,7 +1227,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         JS</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Jorge Silva</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Jorge Silva</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1278,7 +1260,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         AG</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">André Guimarães</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">André Guimarães</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1311,7 +1293,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         WM</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Wadson Matos</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Wadson Matos</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1344,7 +1326,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         AA</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">adriano andrade santos</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">adriano andrade santos</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Local Guide · Google</span>
                       </div>
                     </div>
@@ -1377,7 +1359,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         RV</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Ricardo Vanacker</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Ricardo Vanacker</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1410,7 +1392,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         GM</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Gabriel marques santos</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Gabriel marques santos</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1443,7 +1425,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         MI</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Miguel</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Miguel</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1476,7 +1458,7 @@
                         class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center font-black text-zinc-700 text-xs">
                         DB</div>
                       <div>
-                        <h4 class="font-extrabold text-zinc-900 text-xs">Danilo Bomfim</h4>
+                        <h4 class="font-extrabold text-brand-green text-xs">Danilo Bomfim</h4>
                         <span class="text-[9px] text-zinc-400 font-medium">Cliente Google</span>
                       </div>
                     </div>
@@ -1517,7 +1499,7 @@
               <button
                 class="faq-btn w-full px-5 py-5 flex items-center gap-4 text-left focus:outline-none cursor-pointer">
                 <i data-lucide="help-circle" class="w-5 h-5 text-emerald-500 shrink-0"></i>
-                <span class="font-bold text-sm text-zinc-900 tracking-tight flex-1">O orçamento tem algum custo?</span>
+                <span class="font-bold text-sm text-brand-green tracking-tight flex-1">O orçamento tem algum custo?</span>
                 <i data-lucide="chevron-down"
                   class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-300"></i>
               </button>
@@ -1532,7 +1514,7 @@
               <button
                 class="faq-btn w-full px-5 py-5 flex items-center gap-4 text-left focus:outline-none cursor-pointer">
                 <i data-lucide="help-circle" class="w-5 h-5 text-emerald-500 shrink-0"></i>
-                <span class="font-bold text-sm text-zinc-900 tracking-tight flex-1">Vocês atendem todas as marcas de
+                <span class="font-bold text-sm text-brand-green tracking-tight flex-1">Vocês atendem todas as marcas de
                   veículos?</span>
                 <i data-lucide="chevron-down"
                   class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-300"></i>
@@ -1548,7 +1530,7 @@
               <button
                 class="faq-btn w-full px-5 py-5 flex items-center gap-4 text-left focus:outline-none cursor-pointer">
                 <i data-lucide="help-circle" class="w-5 h-5 text-emerald-500 shrink-0"></i>
-                <span class="font-bold text-sm text-zinc-900 tracking-tight flex-1">Preciso agendar horário ou posso ir
+                <span class="font-bold text-sm text-brand-green tracking-tight flex-1">Preciso agendar horário ou posso ir
                   direto?</span>
                 <i data-lucide="chevron-down"
                   class="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-300"></i>
@@ -1695,11 +1677,11 @@
         <!-- Navigation Arrows -->
         <div class="flex items-center gap-3 mt-1">
           <button id="btnPrevFilial"
-            class="w-12 h-12 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-900 bg-white/80 hover:bg-zinc-50 hover:scale-105 active:scale-95 transition-all duration-150 shadow-sm cursor-pointer">
+            class="w-12 h-12 rounded-full border border-zinc-200 flex items-center justify-center text-brand-green bg-white/80 hover:bg-zinc-50 hover:scale-105 active:scale-95 transition-all duration-150 shadow-sm cursor-pointer">
             <i data-lucide="arrow-left" class="w-5 h-5" stroke-width="2"></i>
           </button>
           <button id="btnNextFilial"
-            class="w-12 h-12 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-900 bg-white/80 hover:bg-zinc-50 hover:scale-105 active:scale-95 transition-all duration-150 shadow-sm cursor-pointer">
+            class="w-12 h-12 rounded-full border border-zinc-200 flex items-center justify-center text-brand-green bg-white/80 hover:bg-zinc-50 hover:scale-105 active:scale-95 transition-all duration-150 shadow-sm cursor-pointer">
             <i data-lucide="arrow-right" class="w-5 h-5" stroke-width="2"></i>
           </button>
         </div>
@@ -1742,7 +1724,7 @@
 
           <div class="flex flex-col gap-4 mt-4">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center border border-zinc-800">
+              <div class="w-10 h-10 rounded-full bg-brand-green flex items-center justify-center border border-zinc-800">
                 <i data-lucide="clock" class="w-5 h-5 text-emerald-500"></i>
               </div>
               <div>
@@ -1752,7 +1734,7 @@
             </div>
 
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center border border-zinc-800">
+              <div class="w-10 h-10 rounded-full bg-brand-green flex items-center justify-center border border-zinc-800">
                 <i data-lucide="mail" class="w-5 h-5 text-emerald-500"></i>
               </div>
               <div>
@@ -1762,7 +1744,7 @@
             </div>
 
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center border border-zinc-800">
+              <div class="w-10 h-10 rounded-full bg-brand-green flex items-center justify-center border border-zinc-800">
                 <i data-lucide="shield-check" class="w-5 h-5 text-emerald-500"></i>
               </div>
               <div>
@@ -1775,7 +1757,7 @@
 
         <!-- Right: Contact Form -->
         <div
-          class="bg-zinc-900/50 backdrop-blur-md border border-zinc-800/50 rounded-3xl p-6 md:p-8 shadow-2xl flex flex-col gap-5 relative overflow-hidden">
+          class="bg-brand-green/50 backdrop-blur-md border border-zinc-800/50 rounded-3xl p-6 md:p-8 shadow-2xl flex flex-col gap-5 relative overflow-hidden">
           <div
             class="absolute top-0 left-1/2 -translate-x-1/2 w-[150px] h-[1px] bg-emerald-500 shadow-[0_0_15px_rgba(72,186,7,0.8)]">
           </div>
@@ -1835,7 +1817,7 @@
   </main>
 
   <!-- Social Icons Footer (Simplified) -->
-  <footer class="relative z-10 w-full bg-black">
+  <footer class="relative z-10 w-full bg-brand-dark">
     <div
       class="flex flex-col md:flex-row items-center justify-between px-12 py-6 md:py-8 gap-4 text-xs text-zinc-400 max-w-6xl mx-auto">
       <!-- Info -->
@@ -1890,7 +1872,7 @@
           </div>
         </div>
         <button id="chatbot-close-btn"
-          class="p-2 rounded-full hover:bg-zinc-800 text-zinc-400 hover:text-white transition-colors cursor-pointer">
+          class="p-2 rounded-full hover:bg-emerald-600 text-zinc-400 hover:text-white transition-colors cursor-pointer">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
