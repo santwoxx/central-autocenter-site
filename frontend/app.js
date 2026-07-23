@@ -533,9 +533,9 @@ animateParticles();
    ========================================================================== */
 const btnTabInicio = document.getElementById('btnTabInicio');
 const btnTabServicos = document.getElementById('btnTabServicos');
-const btnTabFiliais = document.getElementById('btnTabFiliais');
+const btnTabParceiros = document.getElementById('btnTabParceiros');
 const servicosContent = document.getElementById('servicosContent');
-const filiaisContent = document.getElementById('filiaisContent');
+const parceirosContent = document.getElementById('parceirosContent');
 
 let isTransitioning = false;
 let servicesTimeoutId = null;
@@ -544,7 +544,7 @@ let servicesTimeoutId = null;
 const transitionStyle = 'opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
 if (heroContent) heroContent.style.transition = transitionStyle;
 if (servicosContent) servicosContent.style.transition = transitionStyle;
-if (filiaisContent) filiaisContent.style.transition = transitionStyle;
+if (parceirosContent) parceirosContent.style.transition = transitionStyle;
 
 function switchTab(tabId) {
   if (currentTab === tabId || isTransitioning) return;
@@ -558,7 +558,7 @@ function switchTab(tabId) {
     servicesTimeoutId = null;
   }
   
-  const tabOrder = ['inicio', 'servicos', 'filiais'];
+  const tabOrder = ['inicio', 'servicos', 'parceiros'];
   const fromIndex = tabOrder.indexOf(currentTab);
   const toIndex = tabOrder.indexOf(tabId);
   const isForward = toIndex > fromIndex;
@@ -566,9 +566,9 @@ function switchTab(tabId) {
   let activeContent = null;
   if (currentTab === 'inicio') activeContent = heroContent;
   else if (currentTab === 'servicos') activeContent = servicosContent;
-  else if (currentTab === 'filiais') activeContent = filiaisContent;
+  else if (currentTab === 'parceiros') activeContent = parceirosContent;
 
-  const targetContent = tabId === 'inicio' ? heroContent : (tabId === 'servicos' ? servicosContent : filiaisContent);
+  const targetContent = tabId === 'inicio' ? heroContent : (tabId === 'servicos' ? servicosContent : parceirosContent);
   
   // 1. Slide and Fade out active content (video card rides along as a child of heroContent)
   if (activeContent) {
@@ -590,9 +590,9 @@ function switchTab(tabId) {
       servicosContent.classList.remove('services-active');
       servicosContent.style.opacity = '0';
     }
-    if (filiaisContent) {
-      filiaisContent.classList.add('hidden');
-      filiaisContent.style.opacity = '0';
+    if (parceirosContent) {
+      parceirosContent.classList.add('hidden');
+      parceirosContent.style.opacity = '0';
     }
     
     // Set target start state for slide-in entry
@@ -612,8 +612,8 @@ function switchTab(tabId) {
       // Resume frame animation when entering services tab
       if (window._frameAnimPaused !== undefined) window._frameAnimPaused = false;
       if (typeof window._updateFrameFromScroll === 'function') window._updateFrameFromScroll();
-    } else if (tabId === 'filiais') {
-      if (filiaisContent) filiaisContent.classList.remove('hidden');
+    } else if (tabId === 'parceiros') {
+      if (parceirosContent) parceirosContent.classList.remove('hidden');
       if (video) video.pause();
       if (window._frameAnimPaused !== undefined) window._frameAnimPaused = true;
       // Update interactive icons if needed
@@ -624,7 +624,7 @@ function switchTab(tabId) {
     const buttons = [
       { id: 'inicio', element: btnTabInicio },
       { id: 'servicos', element: btnTabServicos },
-      { id: 'filiais', element: btnTabFiliais }
+      { id: 'parceiros', element: btnTabParceiros }
     ];
     
     buttons.forEach(btn => {
@@ -680,7 +680,7 @@ function switchTab(tabId) {
 // Menu item tab switching (same instant hide/show on mobile and desktop,
 // so going from one tab to another never requires scrolling through the
 // other two tabs' full content first).
-if (btnTabInicio && btnTabServicos && btnTabFiliais) {
+if (btnTabInicio && btnTabServicos && btnTabParceiros) {
   btnTabInicio.addEventListener('click', (e) => {
     e.preventDefault();
     switchTab('inicio');
@@ -689,9 +689,9 @@ if (btnTabInicio && btnTabServicos && btnTabFiliais) {
     e.preventDefault();
     switchTab('servicos');
   });
-  btnTabFiliais.addEventListener('click', (e) => {
+  btnTabParceiros.addEventListener('click', (e) => {
     e.preventDefault();
-    switchTab('filiais');
+    switchTab('parceiros');
   });
 }
 
@@ -727,7 +727,7 @@ window.addEventListener('scroll', () => {
     if (!isAtTop) {
       topScrollCount = 0;
     }
-  } else if (currentTab === 'filiais') {
+  } else if (currentTab === 'parceiros') {
     const isAtTop = window.scrollY <= 5;
     if (!isAtTop) {
       topScrollCount = 0;
@@ -748,14 +748,14 @@ function incrementScrollTrigger(direction) {
       if (currentTab === 'inicio') {
         switchTab('servicos');
       } else if (currentTab === 'servicos') {
-        switchTab('filiais');
+        switchTab('parceiros');
       }
     }
   } else if (direction === 'up') {
     topScrollCount++;
     if (topScrollCount >= 2) {
       topScrollCount = 0;
-      if (currentTab === 'filiais') {
+      if (currentTab === 'parceiros') {
         switchTab('servicos');
       } else if (currentTab === 'servicos') {
         switchTab('inicio');
@@ -782,7 +782,7 @@ window.addEventListener('wheel', (e) => {
     if (isAtBottom && e.deltaY > 0) {
       incrementScrollTrigger('down');
     }
-  } else if (currentTab === 'filiais') {
+  } else if (currentTab === 'parceiros') {
     if (window.scrollY === 0 && e.deltaY < 0) {
       incrementScrollTrigger('up');
     }
@@ -817,7 +817,7 @@ window.addEventListener('touchmove', (e) => {
       incrementScrollTrigger('down');
       touchStartY = touchEndY;
     }
-  } else if (currentTab === 'filiais') {
+  } else if (currentTab === 'parceiros') {
     if (window.scrollY === 0 && diffY > 40) {
       incrementScrollTrigger('up');
       touchStartY = touchEndY;
@@ -849,9 +849,9 @@ document.querySelectorAll('[data-scroll-anim]').forEach(el => {
 
 
 /* ==========================================================================
-   6. 3D CAROUSEL ENGINE FOR FILIAIS
+   6. 3D CAROUSEL ENGINE FOR PARCEIROS
    ========================================================================== */
-const FILIAIS_DATA = [
+const PARCEIROS_DATA = [
   {
     name: 'Itabuna - Central Pneus',
     address: 'BR-415, 4249 - Centro Industrial, Itabuna - BA, 45613-000',
@@ -891,42 +891,42 @@ const FILIAIS_DATA = [
 ];
 
 // Preload images
-FILIAIS_DATA.forEach(item => {
+PARCEIROS_DATA.forEach(item => {
   const img = new Image();
   img.src = item.src;
 });
 
-let filialActiveIndex = 0;
+let parceiroActiveIndex = 0;
 let carouselAnimating = false;
 
 function updateCarouselUI() {
   const isMobile = window.innerWidth < 640;
-  const container = document.getElementById('filiaisContent');
+  const container = document.getElementById('parceirosContent');
   const ghostText = document.getElementById('giantGhostText');
-  const filialTitle = document.getElementById('filialTitle');
-  const filialAddress = document.getElementById('filialAddress');
-  const filialPhone = document.getElementById('filialPhone');
-  const filialMap = document.getElementById('btnFilialMap');
+  const parceiroTitle = document.getElementById('parceiroTitle');
+  const parceiroAddress = document.getElementById('parceiroAddress');
+  const parceiroPhone = document.getElementById('parceiroPhone');
+  const parceiroMap = document.getElementById('btnParceiroMap');
   
   if (!container) return;
 
-  const currentData = FILIAIS_DATA[filialActiveIndex];
+  const currentData = PARCEIROS_DATA[parceiroActiveIndex];
   
   // Transition background color (Dynamic)
   container.style.backgroundColor = currentData.bgColor;
   
   // Transition texts
   if (ghostText) ghostText.textContent = currentData.ghostText;
-  if (filialTitle) filialTitle.textContent = currentData.name;
-  if (filialAddress) filialAddress.textContent = currentData.address;
-  if (filialPhone) filialPhone.textContent = `WhatsApp: ${currentData.phone}`;
-  if (filialMap) filialMap.href = currentData.whatsappUrl;
+  if (parceiroTitle) parceiroTitle.textContent = currentData.name;
+  if (parceiroAddress) parceiroAddress.textContent = currentData.address;
+  if (parceiroPhone) parceiroPhone.textContent = `WhatsApp: ${currentData.phone}`;
+  if (parceiroMap) parceiroMap.href = currentData.whatsappUrl;
 
   // Calculate roles indices
-  const total = FILIAIS_DATA.length;
-  const center = filialActiveIndex;
-  const right = (filialActiveIndex + 1) % total;
-  const left = (filialActiveIndex + total - 1) % total;
+  const total = PARCEIROS_DATA.length;
+  const center = parceiroActiveIndex;
+  const right = (parceiroActiveIndex + 1) % total;
+  const left = (parceiroActiveIndex + total - 1) % total;
 
   const items = document.querySelectorAll('.carousel-item');
   items.forEach(el => {
@@ -958,7 +958,7 @@ function updateCarouselUI() {
       el.style.left = isMobile ? '78%' : '68%';
       el.style.bottom = isMobile ? '32%' : '14%';
     } else {
-      // Off-stage items (when there are more filiais than visible slots)
+      // Off-stage items (when there are more parceiros than visible slots)
       el.style.transform = `translateX(-50%) scale(${isMobile ? 0.5 : 0.6})`;
       el.style.filter = 'blur(6px)';
       el.style.opacity = '0';
@@ -972,14 +972,14 @@ function updateCarouselUI() {
 function navigateCarousel(direction) {
   if (carouselAnimating) return;
   carouselAnimating = true;
-  const currentFilial = FILIAIS_DATA[filialActiveIndex];
-  if (window.CA_Analytics) window.CA_Analytics.trackFilialView(currentFilial.name);
+  const currentParceiro = PARCEIROS_DATA[parceiroActiveIndex];
+  if (window.CA_Analytics) window.CA_Analytics.trackParceiroView(currentParceiro.name);
   
-  const total = FILIAIS_DATA.length;
+  const total = PARCEIROS_DATA.length;
   if (direction === 'next') {
-    filialActiveIndex = (filialActiveIndex + 1) % total;
+    parceiroActiveIndex = (parceiroActiveIndex + 1) % total;
   } else {
-    filialActiveIndex = (filialActiveIndex + total - 1) % total;
+    parceiroActiveIndex = (parceiroActiveIndex + total - 1) % total;
   }
   
   updateCarouselUI();
@@ -994,14 +994,14 @@ const carouselItems = document.querySelectorAll('.carousel-item');
 carouselItems.forEach(item => {
   item.addEventListener('click', (e) => {
     const idx = parseInt(item.getAttribute('data-index'), 10);
-    if (idx !== filialActiveIndex) {
+    if (idx !== parceiroActiveIndex) {
       e.preventDefault(); // Prevent opening link if not the active item
       if (carouselAnimating) return;
       
-      const currentFilial = FILIAIS_DATA[idx];
-      if (window.CA_Analytics) window.CA_Analytics.trackFilialView(currentFilial.name);
+      const currentParceiro = PARCEIROS_DATA[idx];
+      if (window.CA_Analytics) window.CA_Analytics.trackParceiroView(currentParceiro.name);
       
-      filialActiveIndex = idx;
+      parceiroActiveIndex = idx;
       updateCarouselUI();
       
       carouselAnimating = true;
@@ -1013,20 +1013,20 @@ carouselItems.forEach(item => {
 });
 
 // Nav Arrow Listeners
-const btnPrev = document.getElementById('btnPrevFilial');
-const btnNext = document.getElementById('btnNextFilial');
-const btnFilialMap = document.getElementById('btnFilialMap');
+const btnPrev = document.getElementById('btnPrevParceiro');
+const btnNext = document.getElementById('btnNextParceiro');
+const btnParceiroMap = document.getElementById('btnParceiroMap');
 
 if (btnPrev && btnNext) {
   btnPrev.addEventListener('click', () => navigateCarousel('prev'));
   btnNext.addEventListener('click', () => navigateCarousel('next'));
 }
 
-// Firebase: track WhatsApp/map click on filial
-if (btnFilialMap) {
-  btnFilialMap.addEventListener('click', () => {
-    const currentFilial = FILIAIS_DATA[filialActiveIndex];
-    if (window.CA_Analytics) window.CA_Analytics.trackWhatsappClick(`filial_${currentFilial.name}`);
+// Firebase: track WhatsApp/map click on parceiro
+if (btnParceiroMap) {
+  btnParceiroMap.addEventListener('click', () => {
+    const currentParceiro = PARCEIROS_DATA[parceiroActiveIndex];
+    if (window.CA_Analytics) window.CA_Analytics.trackWhatsappClick(`parceiro_${currentParceiro.name}`);
   });
 }
 

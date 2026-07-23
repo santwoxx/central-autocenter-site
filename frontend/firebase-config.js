@@ -78,9 +78,9 @@ window.CA_Analytics = {
     });
   },
 
-  // Filial visualizada
-  trackFilialView(filialName) {
-    logEvent(analytics, 'filial_view', { filial_name: filialName });
+  // Parceiro visualizada
+  trackParceiroView(parceiroName) {
+    logEvent(analytics, 'parceiro_view', { parceiro_name: parceiroName });
   },
 
   // Busca rápida (quick tags)
